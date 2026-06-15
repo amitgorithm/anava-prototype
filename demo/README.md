@@ -1,4 +1,4 @@
-# Sozo Medical Demo Prototype
+﻿# Anava Medical Demo Prototype
 
 A modular, state-driven medical application prototype demonstrating role-based workflows for stakeholder presentation.
 

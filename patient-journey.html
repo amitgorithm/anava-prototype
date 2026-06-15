@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOZO Clinical Journey - Sozo Clinical Operating System</title>
+    <title>Anava Clinical Journey - Anava Clinical Operating System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --orange-primary: rgb(244, 121, 32);
+            --anava-blue: rgb(0, 82, 162);
             --blue-primary: rgb(0, 161, 228);
             --dark-bg: #0f172a;
             --light-bg: #f8f9fa;
@@ -47,7 +47,7 @@
         }
 
         .assessment-section.expanded {
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .assessment-section.locked {
@@ -64,7 +64,7 @@
         }
 
         .assessment-header:hover:not(.locked) {
-            background: rgba(244, 121, 32, 0.05);
+            background: rgba(0, 82, 162, 0.05);
         }
 
         .assessment-header.locked {
@@ -106,8 +106,8 @@
         }
 
         .assessment-badge.completed {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .assessment-badge.active {
@@ -153,7 +153,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--orange-primary), #dc6027);
+            background: linear-gradient(90deg, var(--anava-blue), #dc6027);
             transition: width 0.3s ease;
         }
 
@@ -218,7 +218,7 @@
 
         /* STATE-BASED COLORS */
         .block-card.completed::before {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
         }
 
         .block-card.pending::before {
@@ -248,8 +248,8 @@
 
         /* STATE-BASED ICON COLORS */
         .block-card.completed .block-icon {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .block-card.pending .block-icon {
@@ -308,9 +308,9 @@
         }
 
         .block-card.completed .block-status {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
+            border-color: var(--anava-blue);
         }
 
         .block-card.pending .block-status {
@@ -395,7 +395,7 @@
         }
 
         .session-box.completed::before {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
         }
 
         .session-box.pending::before {
@@ -429,8 +429,8 @@
         }
 
         .session-box.completed .session-icon {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .session-box.pending .session-icon {
@@ -489,9 +489,9 @@
         }
 
         .session-box.completed .session-status-badge {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
-            border: 1.5px solid var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
+            border: 1.5px solid var(--anava-blue);
         }
 
         .session-box.pending .session-status-badge {
@@ -595,7 +595,7 @@
         }
 
         .improvements-btn {
-            background: linear-gradient(135deg, var(--orange-primary) 0%, rgb(202, 65, 12) 100%);
+            background: linear-gradient(135deg, var(--anava-blue) 0%, rgb(0, 60, 120) 100%);
             color: white;
             border: none;
             padding: 12px 28px;
@@ -615,7 +615,7 @@
         .improvements-btn:hover {
             opacity: 0.9;
             transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(244, 121, 32, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 82, 162, 0.3);
         }
 
         /* SCROLLBAR */
@@ -661,14 +661,14 @@
         }
 
         .tab-button:hover {
-            background: rgba(244, 121, 32, 0.1);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.1);
+            color: var(--anava-blue);
         }
 
         .tab-button.active {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             color: white;
-            box-shadow: 0 2px 8px rgba(244, 121, 32, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 82, 162, 0.3);
         }
 
         .tab-content {
@@ -713,7 +713,7 @@
         .role-icon.clinical-assistant,
         .role-icon.patient,
         .role-icon.receptionist {
-            background: linear-gradient(135deg, var(--orange-primary), #dc6027);
+            background: linear-gradient(135deg, var(--anava-blue), #dc6027);
         }
 
         .role-info h3 {
@@ -742,7 +742,7 @@
         .role-badge.clinical-assistant,
         .role-badge.patient,
         .role-badge.receptionist {
-            background: rgba(244, 121, 32, 0.1);
+            background: rgba(0, 82, 162, 0.1);
             color: #dc6027;
         }
 
@@ -777,13 +777,13 @@
         }
 
         .role-select:hover {
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .role-select:focus {
             outline: none;
-            border-color: var(--orange-primary);
-            box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.1);
+            border-color: var(--anava-blue);
+            box-shadow: 0 0 0 3px rgba(0, 82, 162, 0.1);
         }
 
         /* PATIENT NAVIGATION BUTTONS */
@@ -795,8 +795,8 @@
 
         .nav-button {
             padding: 8px 16px;
-            border: 2px solid var(--orange-primary);
-            background: linear-gradient(135deg, var(--orange-primary), #dc6027);
+            border: 2px solid var(--anava-blue);
+            background: linear-gradient(135deg, var(--anava-blue), #dc6027);
             color: white;
             border-radius: 8px;
             font-size: 13px;
@@ -806,13 +806,13 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 2px 4px rgba(244, 121, 32, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 82, 162, 0.2);
         }
 
         .nav-button:hover:not(:disabled) {
-            background: linear-gradient(135deg, #dc6027, var(--orange-primary));
+            background: linear-gradient(135deg, #dc6027, var(--anava-blue));
             transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(244, 121, 32, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 82, 162, 0.3);
         }
 
         .nav-button:disabled {
@@ -831,8 +831,8 @@
 
         /* TODAY'S VIEW */
         .today-header {
-            background: rgba(244, 121, 32, 0.1);
-            border: 2px solid rgba(244, 121, 32, 0.3);
+            background: rgba(0, 82, 162, 0.1);
+            border: 2px solid rgba(0, 82, 162, 0.3);
             color: #0f172a;
             border-radius: 12px;
             padding: 24px;
@@ -972,13 +972,13 @@
         }
 
         .action-button:hover {
-            border-color: var(--orange-primary);
-            color: var(--orange-primary);
+            border-color: var(--anava-blue);
+            color: var(--anava-blue);
         }
 
         .action-button.primary {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -1147,8 +1147,8 @@
         }
 
         .block-action-btn.edit {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -1165,8 +1165,8 @@
         }
 
         .block-action-btn.start {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -1224,8 +1224,8 @@
 
         /* WORKING JOURNEY STYLES */
         .patient-info-banner {
-            background: rgba(244, 121, 32, 0.1);
-            border: 2px solid rgba(244, 121, 32, 0.3);
+            background: rgba(0, 82, 162, 0.1);
+            border: 2px solid rgba(0, 82, 162, 0.3);
             color: #0f172a;
             border-radius: 12px;
             padding: 24px;
@@ -1273,13 +1273,13 @@
 
         .block-card.can-start {
             cursor: pointer;
-            border-color: rgba(244, 121, 32, 0.3);
+            border-color: rgba(0, 82, 162, 0.3);
         }
 
         .block-card.can-start:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .block-status.ready {
@@ -1310,7 +1310,7 @@
         }
 
         .start-button.primary {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             color: white;
         }
 
@@ -1626,8 +1626,8 @@
 
         .assessment-modal-close:hover {
             background: #f8fafc;
-            border-color: var(--orange-primary);
-            color: var(--orange-primary);
+            border-color: var(--anava-blue);
+            color: var(--anava-blue);
         }
 
         .assessment-modal-body {
@@ -1644,7 +1644,7 @@
             color: #0f172a;
             margin-bottom: 16px;
             padding-bottom: 12px;
-            border-bottom: 2px solid var(--orange-primary);
+            border-bottom: 2px solid var(--anava-blue);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -1691,9 +1691,9 @@
             text-transform: uppercase;
         }
 
-        .assessment-badge-info.sozo {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+        .assessment-badge-info.anava {
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .assessment-badge-info.blue {
@@ -1704,7 +1704,7 @@
         .assessment-conclusion-box {
             background: #f8fafc;
             padding: 16px;
-            border-left: 4px solid var(--orange-primary);
+            border-left: 4px solid var(--anava-blue);
             border-radius: 8px;
             margin-bottom: 16px;
         }
@@ -2074,8 +2074,8 @@
         }
 
         .payment-override-reason-section {
-            background: linear-gradient(135deg, rgba(244, 121, 32, 0.05) 0%, rgba(251, 146, 60, 0.05) 100%);
-            border: 1px solid rgba(244, 121, 32, 0.2);
+            background: linear-gradient(135deg, rgba(0, 82, 162, 0.05) 0%, rgba(251, 146, 60, 0.05) 100%);
+            border: 1px solid rgba(0, 82, 162, 0.2);
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 24px;
@@ -2379,7 +2379,7 @@
         
         /* Consultation Discount Modal Styling */
         #consultationDiscountModal .payment-override-header {
-            background: linear-gradient(135deg, var(--orange-primary) 0%, #dc6027 100%);
+            background: linear-gradient(135deg, var(--anava-blue) 0%, #dc6027 100%);
         }
         
         .consultation-discount-preview {
@@ -2405,7 +2405,7 @@
         }
         
         .discount-row.discount-amount {
-            color: var(--orange-primary);
+            color: var(--anava-blue);
             font-weight: 600;
         }
         
@@ -2429,8 +2429,8 @@
         
         #discountPercentage:focus {
             outline: none;
-            border-color: var(--orange-primary);
-            box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.1);
+            border-color: var(--anava-blue);
+            box-shadow: 0 0 0 3px rgba(0, 82, 162, 0.1);
         }
 
         /* Payment Override Success State */
@@ -2520,14 +2520,14 @@
             display: none;
         }
 
-        /* SOZO BRANDING STYLES */
-        .sozo-logo-container {
+        /* ANAVA BRANDING STYLES */
+        .anava-logo-container {
             margin-right: 20px;
             display: flex;
             align-items: center;
         }
         
-        .sozo-logo {
+        .anava-logo {
             height: 50px;
             width: auto;
             object-fit: contain;
@@ -2546,11 +2546,11 @@
         /* PROMINENT ROLE DISPLAY BANNER */
         .role-display-banner.prominent {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border: 2px solid var(--orange-primary);
+            border: 2px solid var(--anava-blue);
             border-radius: 16px;
             padding: 24px;
             margin: 24px 0;
-            box-shadow: 0 8px 24px rgba(244, 121, 32, 0.1);
+            box-shadow: 0 8px 24px rgba(0, 82, 162, 0.1);
         }
         
         .role-display-banner.prominent .role-info h3 {
@@ -2577,7 +2577,7 @@
             font-weight: 700;
         }
         
-        .sozo-footer {
+        .anava-footer {
             background: #f8fafc;
             border-top: 1px solid #e2e8f0;
             padding: 16px 0;
@@ -2607,7 +2607,7 @@
                 text-align: center;
             }
             
-            .sozo-logo {
+            .anava-logo {
                 height: 40px;
             }
             
@@ -2616,82 +2616,36 @@
                 text-align: center;
             }
             
-            .sozo-logo-container {
+            .anava-logo-container {
                 margin-right: 0;
                 margin-bottom: 10px;
             }
         }
         
-        /* SOZO WATERMARKS */
-        .container-journey::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                repeating-linear-gradient(
-                    45deg,
-                    transparent,
-                    transparent 150px,
-                    rgba(244, 117, 32, 0.06) 150px,
-                    rgba(244, 117, 32, 0.06) 152px
-                ),
-                repeating-linear-gradient(
-                    -45deg,
-                    transparent,
-                    transparent 150px,
-                    rgba(244, 117, 32, 0.05) 150px,
-                    rgba(244, 117, 32, 0.05) 152px
-                );
-            pointer-events: none;
-            z-index: 0;
-        }
+        /* ANAVA WATERMARKS */
         
-        .watermark-text {
-            position: fixed;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: rgba(244, 117, 32, 0.09);
-            pointer-events: none;
-            z-index: 0;
-            user-select: none;
-            transform: rotate(-45deg);
-            white-space: nowrap;
-        }
         
-        .watermark-logo {
-            position: fixed;
-            opacity: 0.07;
-            pointer-events: none;
-            z-index: 0;
-            user-select: none;
-            transform: rotate(-45deg);
-        }
         
-        .watermark-logo img {
-            width: 120px;
-            height: auto;
-            filter: grayscale(100%) contrast(0.5);
-        }
         
-        .watermark-1 { top: 15%; left: 10%; }
-        .watermark-2 { top: 15%; right: 10%; }
-        .watermark-3 { top: 35%; left: 5%; }
-        .watermark-4 { top: 35%; right: 5%; }
-        .watermark-5 { top: 55%; left: 15%; }
-        .watermark-6 { top: 55%; right: 15%; }
-        .watermark-7 { top: 75%; left: 8%; }
-        .watermark-8 { top: 75%; right: 8%; }
         
-        .watermark-logo-1 { top: 25%; left: 20%; }
-        .watermark-logo-2 { top: 25%; right: 20%; }
-        .watermark-logo-3 { top: 45%; left: 25%; }
-        .watermark-logo-4 { top: 45%; right: 25%; }
-        .watermark-logo-5 { top: 65%; left: 12%; }
-        .watermark-logo-6 { top: 65%; right: 12%; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         /* Ensure main content stays above watermarks */
         .page-header,
@@ -2699,7 +2653,7 @@
         .selectedPatientHeader,
         .journey-content,
         .assessment-section,
-        .sozo-footer {
+        .anava-footer {
             position: relative;
             z-index: 1;
             background: rgba(255, 255, 255, 0.98);
@@ -2712,8 +2666,8 @@
         <!-- PAGE HEADER -->
         <div class="page-header">
             <div class="page-header-left">
-                <div class="sozo-logo-container">
-                    <img src="logo1.png" alt="SOZO Brain Center" class="sozo-logo">
+                <div class="anava-logo-container">
+                    <div class="flex items-center gap-2"><span style="font-size:1.2rem;font-weight:900;color:rgb(0,82,162);letter-spacing:-0.01em;">ANAVA</span></div>
                 </div>
                 <div class="page-title-container">
                     <h1 class="page-title">Clinical Neuromodulation Journey</h1>
@@ -2754,7 +2708,7 @@
             <div style="background: white; border-radius: 20px; padding: 48px; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15); border: 1px solid #e2e8f0;">
                 <!-- Header -->
                 <div style="text-align: center; margin-bottom: 40px;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: linear-gradient(135deg, var(--orange-primary), #dc6027); border-radius: 50%; margin-bottom: 20px;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: linear-gradient(135deg, var(--anava-blue), #dc6027); border-radius: 50%; margin-bottom: 20px;">
                         <i class="fa-solid fa-clipboard-list" style="font-size: 36px; color: white;"></i>
                     </div>
                     <h2 style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Patient Registration Questionnaire</h2>
@@ -2764,9 +2718,9 @@
                 <!-- Questionnaire Form -->
                 <form id="questionnaireForm" style="margin-bottom: 32px;">
                     <!-- Medical History Section -->
-                    <div style="background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 24px; border-left: 4px solid var(--orange-primary);">
+                    <div style="background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 24px; border-left: 4px solid var(--anava-blue);">
                         <h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                            <i class="fa-solid fa-hospital" style="color: var(--orange-primary);"></i>
+                            <i class="fa-solid fa-hospital" style="color: var(--anava-blue);"></i>
                             Medical History
                         </h3>
                         
@@ -2935,7 +2889,7 @@
                     <button type="button" onclick="skipQuestionnaire()" style="padding: 16px 32px; background: white; color: #64748b; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 180px;">
                         <i class="fa-solid fa-forward"></i> Skip for Now
                     </button>
-                    <button type="button" onclick="submitQuestionnaire()" style="padding: 16px 32px; background: linear-gradient(135deg, var(--orange-primary), #dc6027); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 180px; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);">
+                    <button type="button" onclick="submitQuestionnaire()" style="padding: 16px 32px; background: linear-gradient(135deg, var(--anava-blue), #dc6027); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 180px; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);">
                         Continue <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -3064,9 +3018,9 @@
                 </div>
                 
                 <!-- Doctor Discount Section (Hidden by default) -->
-                <div id="doctorDiscountSection" style="background: linear-gradient(135deg, rgba(244, 121, 32, 0.05), rgba(251, 146, 60, 0.05)); border: 2px solid rgba(244, 121, 32, 0.2); border-radius: 16px; padding: 24px; margin-bottom: 24px; display: none;">
+                <div id="doctorDiscountSection" style="background: linear-gradient(135deg, rgba(0, 82, 162, 0.05), rgba(251, 146, 60, 0.05)); border: 2px solid rgba(0, 82, 162, 0.2); border-radius: 16px; padding: 24px; margin-bottom: 24px; display: none;">
                     <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0 0 16px 0; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-percentage" style="color: var(--orange-primary);"></i>
+                        <i class="fa-solid fa-percentage" style="color: var(--anava-blue);"></i>
                         Apply Consultation Discount
                     </h4>
                     
@@ -3100,7 +3054,7 @@
                         <textarea id="paymentDiscountReason" rows="2" placeholder="Please provide a reason for the discount..." style="width: 100%; padding: 10px 12px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; resize: vertical; box-sizing: border-box;"></textarea>
                     </div>
                     
-                    <button id="applyPaymentDiscountBtn" onclick="applyPaymentDiscount()" style="background: linear-gradient(135deg, var(--orange-primary), #dc6027); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s;" disabled>
+                    <button id="applyPaymentDiscountBtn" onclick="applyPaymentDiscount()" style="background: linear-gradient(135deg, var(--anava-blue), #dc6027); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s;" disabled>
                         <i class="fa-solid fa-check"></i>
                         Apply Discount
                     </button>
@@ -3119,10 +3073,10 @@
                     
                     <!-- Discount Row (Hidden by default) -->
                     <div id="discountRow" style="display: none; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 14px; color: var(--orange-primary); font-weight: 600;">
+                        <span style="font-size: 14px; color: var(--anava-blue); font-weight: 600;">
                             <i class="fa-solid fa-percentage"></i> Discount (<span id="discountPercentDisplay">0</span>%)
                         </span>
-                        <span style="font-size: 20px; font-weight: 700; color: var(--orange-primary);" id="discountAmountDisplay">-€0</span>
+                        <span style="font-size: 20px; font-weight: 700; color: var(--anava-blue);" id="discountAmountDisplay">-€0</span>
                     </div>
                     
                     <!-- Final Amount Row -->
@@ -3132,7 +3086,7 @@
                     </div>
                     
                     <!-- Discount Info (Hidden by default) -->
-                    <div id="discountInfo" style="display: none; background: rgba(244, 121, 32, 0.1); border-left: 3px solid var(--orange-primary); padding: 12px; margin-top: 16px; border-radius: 0 8px 8px 0;">
+                    <div id="discountInfo" style="display: none; background: rgba(0, 82, 162, 0.1); border-left: 3px solid var(--anava-blue); padding: 12px; margin-top: 16px; border-radius: 0 8px 8px 0;">
                         <div style="font-size: 12px; color: #92400e; font-weight: 600;">
                             <i class="fa-solid fa-info-circle"></i> Discount Applied
                         </div>
@@ -3395,7 +3349,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-between;">
                                         <span style="color: #64748b;">Account Name:</span>
-                                        <span style="font-weight: 600; color: #0f172a;">Sozo Clinic Ltd</span>
+                                        <span style="font-weight: 600; color: #0f172a;">Anava Clinic Ltd</span>
                                     </div>
                                     <div style="display: flex; justify-content: space-between;">
                                         <span style="color: #64748b;">IBAN:</span>
@@ -3492,7 +3446,7 @@
                         <input type="text" id="patientSearchInput" placeholder="Search by name or ID..."
                             oninput="filterPatients()"
                             style="width: 100%; padding: 16px 48px 16px 48px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 15px; transition: all 0.3s; background: #f8fafc;"
-                            onfocus="this.style.borderColor='var(--orange-primary)'; this.style.background='white';"
+                            onfocus="this.style.borderColor='var(--anava-blue)'; this.style.background='white';"
                             onblur="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
                         <i class="fa-solid fa-search"
                             style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 16px;"></i>
@@ -3502,10 +3456,10 @@
 
                     <!-- Selected Patient Display -->
                     <div id="selectedPatientDisplay"
-                        style="display: none; background: linear-gradient(135deg, rgba(244, 121, 32, 0.1), rgba(220, 96, 39, 0.1)); border: 2px solid var(--orange-primary); border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                        style="display: none; background: linear-gradient(135deg, rgba(0, 82, 162, 0.1), rgba(220, 96, 39, 0.1)); border: 2px solid var(--anava-blue); border-radius: 12px; padding: 20px; margin-bottom: 20px;">
                         <div style="display: flex; align-items: center; gap: 16px;">
                             <div
-                                style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 700; flex-shrink: 0;">
+                                style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 700; flex-shrink: 0;">
                                 <span id="selectedPatientInitials">SM</span>
                             </div>
                             <div style="flex: 1; text-align: left;">
@@ -3551,7 +3505,7 @@
                     </div>
 
                     <button onclick="showAddNewPatient()"
-                        style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; background: linear-gradient(135deg, var(--orange-primary), #dc6027); border: none; border-radius: 12px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(244, 121, 32, 0.35); transition: all 0.3s;">
+                        style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; background: linear-gradient(135deg, var(--anava-blue), #dc6027); border: none; border-radius: 12px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(244, 121, 32, 0.35); transition: all 0.3s;">
                         <div
                             style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <i class="fa-solid fa-plus" style="font-size: 16px;"></i>
@@ -3567,7 +3521,7 @@
                     style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); max-width: 700px; margin: 0 auto;">
                     <div style="text-align: center; margin-bottom: 32px;">
                         <div
-                            style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
                             <i class="fa-solid fa-user-plus" style="font-size: 32px; color: white;"></i>
                         </div>
                         <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Add New
@@ -3583,7 +3537,7 @@
                                     NAME *</label>
                                 <input type="text" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    placeholder="John" onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    placeholder="John" onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                             <div>
@@ -3592,7 +3546,7 @@
                                     NAME *</label>
                                 <input type="text" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    placeholder="Doe" onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    placeholder="Doe" onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                         </div>
@@ -3604,7 +3558,7 @@
                                     OF BIRTH *</label>
                                 <input type="date" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                             <div>
@@ -3613,7 +3567,7 @@
                                     *</label>
                                 <select required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                                     <option value="">Select</option>
                                     <option value="male">Male</option>
@@ -3630,7 +3584,7 @@
                             <input type="email" required
                                 style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
                                 placeholder="john.doe@example.com"
-                                onfocus="this.style.borderColor='var(--orange-primary)'"
+                                onfocus="this.style.borderColor='var(--anava-blue)'"
                                 onblur="this.style.borderColor='#e2e8f0'">
                         </div>
 
@@ -3642,7 +3596,7 @@
                                 <input type="tel" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
                                     placeholder="+1 (555) 123-4567"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                             <div>
@@ -3651,7 +3605,7 @@
                                     *</label>
                                 <select required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                                     <option value="">Select</option>
                                     <option value="parkinsons">Parkinson's</option>
@@ -3668,7 +3622,7 @@
                                 Cancel
                             </button>
                             <button type="submit" onclick="submitNewPatient(event)"
-                                style="flex: 2; padding: 14px; border: none; background: linear-gradient(135deg, var(--orange-primary), #dc6027); color: white; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(244, 121, 32, 0.3);">
+                                style="flex: 2; padding: 14px; border: none; background: linear-gradient(135deg, var(--anava-blue), #dc6027); color: white; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0, 82, 162, 0.3);">
                                 <i class="fa-solid fa-check"></i> Create Patient
                             </button>
                         </div>
@@ -3684,7 +3638,7 @@
                     <i class="fa-solid fa-user-tie"></i>
                 </div>
                 <div class="role-info">
-                    <h3 id="roleTitle">SOZO Receptionist</h3>
+                    <h3 id="roleTitle">ANAVA Receptionist</h3>
                     <p id="roleDescription">Administrative access - Manage patient records and appointments</p>
                 </div>
             </div>
@@ -3693,15 +3647,15 @@
 
         <!-- SELECTED PATIENT HEADER (Hidden by default) -->
         <div id="selectedPatientHeader"
-            style="display: none; background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--orange-primary);">
+            style="display: none; background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--anava-blue);">
             <div style="display: flex; align-items: center; justify-content: space-between;">
                 <div style="display: flex; align-items: center; gap: 20px;">
                     <div
-                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 700;">
+                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 700;">
                         <span id="patientInitials">SM</span>
                     </div>
                     <div>
-                        <div style="font-size: 11px; font-weight: 600; color: var(--orange-primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">
+                        <div style="font-size: 11px; font-weight: 600; color: var(--anava-blue); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">
                             <i class="fa-solid fa-user"></i> PATIENT
                         </div>
                         <h2 id="patientFullName"
@@ -3911,44 +3865,15 @@
     </div>
     <!-- END CONTAINER -->
 
-    <!-- SOZO WATERMARKS -->
-    <div class="watermark-text watermark-1">SOZO BRAIN CENTER</div>
-    <div class="watermark-text watermark-2">SOZO</div>
-    <div class="watermark-text watermark-3">NEUROMODULATION</div>
-    <div class="watermark-text watermark-4">SOZO BRAIN CENTER</div>
-    <div class="watermark-text watermark-5">SOZO</div>
-    <div class="watermark-text watermark-6">CLINICAL JOURNEY</div>
-    <div class="watermark-text watermark-7">SOZO BRAIN CENTER</div>
-    <div class="watermark-text watermark-8">SOZO</div>
-    
-    <!-- SOZO LOGO WATERMARKS -->
-    <div class="watermark-logo watermark-logo-1">
-        <img src="logo1.png" alt="SOZO">
-    </div>
-    <div class="watermark-logo watermark-logo-2">
-        <img src="logo.png" alt="SOZO">
-    </div>
-    <div class="watermark-logo watermark-logo-3">
-        <img src="logo1.png" alt="SOZO">
-    </div>
-    <div class="watermark-logo watermark-logo-4">
-        <img src="logo.png" alt="SOZO">
-    </div>
-    <div class="watermark-logo watermark-logo-5">
-        <img src="logo1.png" alt="SOZO">
-    </div>
-    <div class="watermark-logo watermark-logo-6">
-        <img src="logo.png" alt="SOZO">
-    </div>
 
-    <!-- SOZO FOOTER -->
-    <div class="sozo-footer">
+    <!-- ANAVA FOOTER -->
+    <div class="anava-footer">
         <div class="footer-content">
             <div class="footer-left">
-                <span>© Copyright 2026 SOZO Brain Center</span>
+                <span>© Copyright 2026 Anava</span>
             </div>
             <div class="footer-right">
-                <span>Get In Touch : info@sozobraincenter.com | +35722879000</span>
+                <span>Get In Touch : info@anava.com | +1 800 ANAVA 00</span>
             </div>
         </div>
     </div>
@@ -4626,13 +4551,13 @@
                         <ul style="font-size: 13px; color: #475569; margin: 0 0 16px 20px; line-height: 1.8;">
                             <li>The patient's payment is currently pending for this assessment</li>
                             <li>You are authorizing the Brain Mapping assessment to proceed without payment</li>
-                            <li>Sozo Medical reserves the right to charge the override amount to your account</li>
+                            <li>Anava Medical reserves the right to charge the override amount to your account</li>
                             <li>This action will be logged in the patient's record for audit purposes</li>
                         </ul>
                         <div class="payment-override-checkbox">
                             <input type="checkbox" id="overrideConsentCheckbox" onchange="toggleOverrideButton()">
                             <label for="overrideConsentCheckbox">
-                                I, as the attending physician, authorize this payment override and accept responsibility for any charges that may be applied to my account by Sozo Medical.
+                                I, as the attending physician, authorize this payment override and accept responsibility for any charges that may be applied to my account by Anava Medical.
                             </label>
                         </div>
                     </div>
@@ -5853,7 +5778,7 @@
                                     </div>
                                     <div class="block-info-item">
                                         <div class="block-info-label">Severity</div>
-                                        <div class="block-info-value" style="color: var(--orange-primary);">Mild (36%)</div>
+                                        <div class="block-info-value" style="color: var(--anava-blue);">Mild (36%)</div>
                                     </div>
                                     <div class="block-info-item">
                                         <div class="block-info-label">Completed By</div>
@@ -8943,7 +8868,7 @@
                      onmouseover="this.style.background='#f8fafc'"
                      onmouseout="this.style.background='white'">
                     <div style="display: flex; align-items: center; gap: 14px;">
-                        <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; flex-shrink: 0;">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; flex-shrink: 0;">
                             ${patient.firstName[0]}${patient.lastName[0]}
                         </div>
                         <div style="flex: 1;">
@@ -9201,25 +9126,25 @@
             const roleConfig = {
                 'doctor': {
                     icon: 'fa-user-doctor',
-                    title: 'SOZO Doctor',
+                    title: 'ANAVA Doctor',
                     description: 'Full clinical access - Manage assessments and treatment plans',
                     class: 'doctor'
                 },
                 'clinical-assistant': {
                     icon: 'fa-user-nurse',
-                    title: 'SOZO Clinical Assistant',
+                    title: 'ANAVA Clinical Assistant',
                     description: 'Support role - Assist with assessments and patient care',
                     class: 'clinical-assistant'
                 },
                 'patient': {
                     icon: 'fa-user',
-                    title: 'SOZO Patient',
+                    title: 'ANAVA Patient',
                     description: 'Patient view - Track your health journey and results',
                     class: 'patient'
                 },
                 'receptionist': {
                     icon: 'fa-user-tie',
-                    title: 'SOZO Receptionist',
+                    title: 'ANAVA Receptionist',
                     description: 'Administrative access - Manage patient records and appointments',
                     class: 'receptionist'
                 }

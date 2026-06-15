@@ -1,7 +1,7 @@
-# Module Structure Guidelines
+﻿# Module Structure Guidelines
 
 ## Overview
-This document defines the standard structure for all role-based modules in the Sozo demo prototype.
+This document defines the standard structure for all role-based modules in the Anava demo prototype.
 
 ---
 

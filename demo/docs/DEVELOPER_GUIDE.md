@@ -1,4 +1,4 @@
-# Sozo Demo Prototype — Developer Guide
+﻿# Anava Demo Prototype — Developer Guide
 
 ## Team Structure & Responsibilities
 

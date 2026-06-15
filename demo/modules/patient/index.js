@@ -1,4 +1,4 @@
-/**
+﻿/**
  * PATIENT MODULE
  * Responsibilities:
  * - Self-registration with basic information
@@ -32,7 +32,7 @@ export function renderPatientModule(container, selectedPatient) {
   container.innerHTML = `
     <div class="module-header">
       <h2>Patient Portal — ${selectedPatient.profile.name}</h2>
-      <p class="small">Welcome to your Sozo health journey</p>
+      <p class="small">Welcome to your Anava health journey</p>
     </div>
     <div class="module-content">
       <div id="patientOverview"></div>
@@ -55,7 +55,7 @@ function renderPatientRegistration(container) {
   container.innerHTML = `
     <div class="card">
       <h3>Patient Registration</h3>
-      <p class="small">Create your account to begin your Sozo journey</p>
+      <p class="small">Create your account to begin your Anava journey</p>
       
       <form id="patientRegForm" class="form-grid">
         <div class="form-group">
@@ -215,7 +215,7 @@ function renderPaymentStatus(patient) {
   if (payNowBtn) {
     payNowBtn.onclick = () => {
       Actions.patientMarkPaid(patient.profile.id);
-      alert('Payment completed successfully! Welcome to Sozo.');
+      alert('Payment completed successfully! Welcome to Anava.');
       
       // Re-render to show full access
       const updatedPatient = Actions.getPatient(patient.profile.id);

@@ -1,15 +1,15 @@
-    <!DOCTYPE html>
+﻿    <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Journey - Sozo Clinical Operating System</title>
+    <title>Patient Journey - Anava Clinical Operating System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --orange-primary: rgb(244, 121, 32);
+            --anava-blue: rgb(0, 82, 162);
             --blue-primary: rgb(0, 161, 228);
             --dark-bg: #0f172a;
             --light-bg: #f8f9fa;
@@ -47,7 +47,7 @@
         }
 
         .assessment-section.expanded {
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .assessment-section.locked {
@@ -64,7 +64,7 @@
         }
 
         .assessment-header:hover:not(.locked) {
-            background: rgba(244, 121, 32, 0.05);
+            background: rgba(0, 82, 162, 0.05);
         }
 
         .assessment-header.locked {
@@ -106,8 +106,8 @@
         }
 
         .assessment-badge.completed {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .assessment-badge.active {
@@ -153,7 +153,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--orange-primary), #dc6027);
+            background: linear-gradient(90deg, var(--anava-blue), #dc6027);
             transition: width 0.3s ease;
         }
 
@@ -218,7 +218,7 @@
 
         /* STATE-BASED COLORS */
         .block-card.completed::before {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
         }
 
         .block-card.pending::before {
@@ -248,8 +248,8 @@
 
         /* STATE-BASED ICON COLORS */
         .block-card.completed .block-icon {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .block-card.pending .block-icon {
@@ -308,9 +308,9 @@
         }
 
         .block-card.completed .block-status {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
+            border-color: var(--anava-blue);
         }
 
         .block-card.pending .block-status {
@@ -395,7 +395,7 @@
         }
 
         .session-box.completed::before {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
         }
 
         .session-box.pending::before {
@@ -429,8 +429,8 @@
         }
 
         .session-box.completed .session-icon {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .session-box.pending .session-icon {
@@ -489,9 +489,9 @@
         }
 
         .session-box.completed .session-status-badge {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
-            border: 1.5px solid var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
+            border: 1.5px solid var(--anava-blue);
         }
 
         .session-box.pending .session-status-badge {
@@ -582,7 +582,7 @@
         }
 
         .improvements-btn {
-            background: linear-gradient(135deg, var(--orange-primary) 0%, rgb(202, 65, 12) 100%);
+            background: linear-gradient(135deg, var(--anava-blue) 0%, rgb(0, 60, 120) 100%);
             color: white;
             border: none;
             padding: 12px 28px;
@@ -602,7 +602,7 @@
         .improvements-btn:hover {
             opacity: 0.9;
             transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(244, 121, 32, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 82, 162, 0.3);
         }
 
         /* SCROLLBAR */
@@ -648,14 +648,14 @@
         }
 
         .tab-button:hover {
-            background: rgba(244, 121, 32, 0.1);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.1);
+            color: var(--anava-blue);
         }
 
         .tab-button.active {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             color: white;
-            box-shadow: 0 2px 8px rgba(244, 121, 32, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 82, 162, 0.3);
         }
 
         .tab-content {
@@ -697,19 +697,19 @@
         }
 
         .role-select:hover {
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .role-select:focus {
             outline: none;
-            border-color: var(--orange-primary);
-            box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.1);
+            border-color: var(--anava-blue);
+            box-shadow: 0 0 0 3px rgba(0, 82, 162, 0.1);
         }
 
         /* TODAY'S VIEW */
         .today-header {
-            background: rgba(244, 121, 32, 0.1);
-            border: 2px solid rgba(244, 121, 32, 0.3);
+            background: rgba(0, 82, 162, 0.1);
+            border: 2px solid rgba(0, 82, 162, 0.3);
             color: #0f172a;
             border-radius: 12px;
             padding: 24px;
@@ -849,13 +849,13 @@
         }
 
         .action-button:hover {
-            border-color: var(--orange-primary);
-            color: var(--orange-primary);
+            border-color: var(--anava-blue);
+            color: var(--anava-blue);
         }
 
         .action-button.primary {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -1024,8 +1024,8 @@
         }
 
         .block-action-btn.edit {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -1042,8 +1042,8 @@
         }
 
         .block-action-btn.start {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -1101,8 +1101,8 @@
 
         /* WORKING JOURNEY STYLES */
         .patient-info-banner {
-            background: rgba(244, 121, 32, 0.1);
-            border: 2px solid rgba(244, 121, 32, 0.3);
+            background: rgba(0, 82, 162, 0.1);
+            border: 2px solid rgba(0, 82, 162, 0.3);
             color: #0f172a;
             border-radius: 12px;
             padding: 24px;
@@ -1150,13 +1150,13 @@
 
         .block-card.can-start {
             cursor: pointer;
-            border-color: rgba(244, 121, 32, 0.3);
+            border-color: rgba(0, 82, 162, 0.3);
         }
 
         .block-card.can-start:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .block-status.ready {
@@ -1187,7 +1187,7 @@
         }
 
         .start-button.primary {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             color: white;
         }
 
@@ -1503,8 +1503,8 @@
 
         .assessment-modal-close:hover {
             background: #f8fafc;
-            border-color: var(--orange-primary);
-            color: var(--orange-primary);
+            border-color: var(--anava-blue);
+            color: var(--anava-blue);
         }
 
         .assessment-modal-body {
@@ -1521,7 +1521,7 @@
             color: #0f172a;
             margin-bottom: 16px;
             padding-bottom: 12px;
-            border-bottom: 2px solid var(--orange-primary);
+            border-bottom: 2px solid var(--anava-blue);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -1568,9 +1568,9 @@
             text-transform: uppercase;
         }
 
-        .assessment-badge-info.sozo {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+        .assessment-badge-info.anava {
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .assessment-badge-info.blue {
@@ -1581,7 +1581,7 @@
         .assessment-conclusion-box {
             background: #f8fafc;
             padding: 16px;
-            border-left: 4px solid var(--orange-primary);
+            border-left: 4px solid var(--anava-blue);
             border-radius: 8px;
             margin-bottom: 16px;
         }
@@ -1812,7 +1812,7 @@
             <div style="background: white; border-radius: 20px; padding: 48px; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15); border: 1px solid #e2e8f0;">
                 <!-- Header -->
                 <div style="text-align: center; margin-bottom: 40px;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: linear-gradient(135deg, var(--orange-primary), #dc6027); border-radius: 50%; margin-bottom: 20px;">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: linear-gradient(135deg, var(--anava-blue), #dc6027); border-radius: 50%; margin-bottom: 20px;">
                         <i class="fa-solid fa-clipboard-list" style="font-size: 36px; color: white;"></i>
                     </div>
                     <h2 style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Patient Registration Questionnaire</h2>
@@ -1822,9 +1822,9 @@
                 <!-- Questionnaire Form -->
                 <form id="questionnaireForm" style="margin-bottom: 32px;">
                     <!-- Medical History Section -->
-                    <div style="background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 24px; border-left: 4px solid var(--orange-primary);">
+                    <div style="background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 24px; border-left: 4px solid var(--anava-blue);">
                         <h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                            <i class="fa-solid fa-hospital" style="color: var(--orange-primary);"></i>
+                            <i class="fa-solid fa-hospital" style="color: var(--anava-blue);"></i>
                             Medical History
                         </h3>
                         
@@ -1993,7 +1993,7 @@
                     <button type="button" onclick="skipQuestionnaire()" style="padding: 16px 32px; background: white; color: #64748b; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 180px;">
                         <i class="fa-solid fa-forward"></i> Skip for Now
                     </button>
-                    <button type="button" onclick="submitQuestionnaire()" style="padding: 16px 32px; background: linear-gradient(135deg, var(--orange-primary), #dc6027); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 180px; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);">
+                    <button type="button" onclick="submitQuestionnaire()" style="padding: 16px 32px; background: linear-gradient(135deg, var(--anava-blue), #dc6027); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 180px; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);">
                         Continue <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -2371,7 +2371,7 @@
                                     </div>
                                     <div style="display: flex; justify-content: space-between;">
                                         <span style="color: #64748b;">Account Name:</span>
-                                        <span style="font-weight: 600; color: #0f172a;">Sozo Clinic Ltd</span>
+                                        <span style="font-weight: 600; color: #0f172a;">Anava Clinic Ltd</span>
                                     </div>
                                     <div style="display: flex; justify-content: space-between;">
                                         <span style="color: #64748b;">IBAN:</span>
@@ -2468,7 +2468,7 @@
                         <input type="text" id="patientSearchInput" placeholder="Search by name or ID..."
                             oninput="filterPatients()"
                             style="width: 100%; padding: 16px 48px 16px 48px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 15px; transition: all 0.3s; background: #f8fafc;"
-                            onfocus="this.style.borderColor='var(--orange-primary)'; this.style.background='white';"
+                            onfocus="this.style.borderColor='var(--anava-blue)'; this.style.background='white';"
                             onblur="this.style.borderColor='#e2e8f0'; this.style.background='#f8fafc';">
                         <i class="fa-solid fa-search"
                             style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 16px;"></i>
@@ -2478,10 +2478,10 @@
 
                     <!-- Selected Patient Display -->
                     <div id="selectedPatientDisplay"
-                        style="display: none; background: linear-gradient(135deg, rgba(244, 121, 32, 0.1), rgba(220, 96, 39, 0.1)); border: 2px solid var(--orange-primary); border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                        style="display: none; background: linear-gradient(135deg, rgba(0, 82, 162, 0.1), rgba(220, 96, 39, 0.1)); border: 2px solid var(--anava-blue); border-radius: 12px; padding: 20px; margin-bottom: 20px;">
                         <div style="display: flex; align-items: center; gap: 16px;">
                             <div
-                                style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 700; flex-shrink: 0;">
+                                style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 700; flex-shrink: 0;">
                                 <span id="selectedPatientInitials">SM</span>
                             </div>
                             <div style="flex: 1; text-align: left;">
@@ -2527,7 +2527,7 @@
                     </div>
 
                     <button onclick="showAddNewPatient()"
-                        style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; background: linear-gradient(135deg, var(--orange-primary), #dc6027); border: none; border-radius: 12px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(244, 121, 32, 0.35); transition: all 0.3s;">
+                        style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; background: linear-gradient(135deg, var(--anava-blue), #dc6027); border: none; border-radius: 12px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(244, 121, 32, 0.35); transition: all 0.3s;">
                         <div
                             style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <i class="fa-solid fa-plus" style="font-size: 16px;"></i>
@@ -2543,7 +2543,7 @@
                     style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); max-width: 700px; margin: 0 auto;">
                     <div style="text-align: center; margin-bottom: 32px;">
                         <div
-                            style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
                             <i class="fa-solid fa-user-plus" style="font-size: 32px; color: white;"></i>
                         </div>
                         <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Add New
@@ -2559,7 +2559,7 @@
                                     NAME *</label>
                                 <input type="text" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    placeholder="John" onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    placeholder="John" onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                             <div>
@@ -2568,7 +2568,7 @@
                                     NAME *</label>
                                 <input type="text" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    placeholder="Doe" onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    placeholder="Doe" onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                         </div>
@@ -2580,7 +2580,7 @@
                                     OF BIRTH *</label>
                                 <input type="date" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                             <div>
@@ -2589,7 +2589,7 @@
                                     *</label>
                                 <select required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                                     <option value="">Select</option>
                                     <option value="male">Male</option>
@@ -2606,7 +2606,7 @@
                             <input type="email" required
                                 style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
                                 placeholder="john.doe@example.com"
-                                onfocus="this.style.borderColor='var(--orange-primary)'"
+                                onfocus="this.style.borderColor='var(--anava-blue)'"
                                 onblur="this.style.borderColor='#e2e8f0'">
                         </div>
 
@@ -2618,7 +2618,7 @@
                                 <input type="tel" required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
                                     placeholder="+1 (555) 123-4567"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                             </div>
                             <div>
@@ -2627,7 +2627,7 @@
                                     *</label>
                                 <select required
                                     style="width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--orange-primary)'"
+                                    onfocus="this.style.borderColor='var(--anava-blue)'"
                                     onblur="this.style.borderColor='#e2e8f0'">
                                     <option value="">Select</option>
                                     <option value="parkinsons">Parkinson's</option>
@@ -2644,7 +2644,7 @@
                                 Cancel
                             </button>
                             <button type="submit" onclick="submitNewPatient(event)"
-                                style="flex: 2; padding: 14px; border: none; background: linear-gradient(135deg, var(--orange-primary), #dc6027); color: white; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(244, 121, 32, 0.3);">
+                                style="flex: 2; padding: 14px; border: none; background: linear-gradient(135deg, var(--anava-blue), #dc6027); color: white; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0, 82, 162, 0.3);">
                                 <i class="fa-solid fa-check"></i> Create Patient
                             </button>
                         </div>
@@ -2655,11 +2655,11 @@
 
         <!-- SELECTED PATIENT HEADER (Hidden by default) -->
         <div id="selectedPatientHeader"
-            style="display: none; background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--orange-primary);">
+            style="display: none; background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--anava-blue);">
             <div style="display: flex; align-items: center; justify-content: space-between;">
                 <div style="display: flex; align-items: center; gap: 20px;">
                     <div
-                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 700;">
+                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 700;">
                         <span id="patientInitials">SM</span>
                     </div>
                     <div>
@@ -3962,7 +3962,7 @@
                                     </div>
                                     <div class="block-info-item">
                                         <div class="block-info-label">Severity</div>
-                                        <div class="block-info-value" style="color: var(--orange-primary);">Mild (36%)</div>
+                                        <div class="block-info-value" style="color: var(--anava-blue);">Mild (36%)</div>
                                     </div>
                                     <div class="block-info-item">
                                         <div class="block-info-label">Completed By</div>
@@ -6344,7 +6344,7 @@
                      onmouseover="this.style.background='#f8fafc'"
                      onmouseout="this.style.background='white'">
                     <div style="display: flex; align-items: center; gap: 14px;">
-                        <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--orange-primary), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; flex-shrink: 0;">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--anava-blue), #dc6027); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; flex-shrink: 0;">
                             ${patient.firstName[0]}${patient.lastName[0]}
                         </div>
                         <div style="flex: 1;">

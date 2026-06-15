@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Profile — Anava</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f1f5f9; color: #1e293b; }
+
+    /* ── Brand colours ── */
+    :root {
+      --brand: #f47920;
+      --brand-dark: #d4620e;
+      --brand-light: #fff7ed;
+      --text-primary: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    /* ── Profile header ── */
+    .profile-header {
+      background: linear-gradient(135deg, #ffffff 60%, var(--brand-light) 100%);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .profile-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--brand);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 26px;
+      flex-shrink: 0;
+    }
+    .profile-meta h1 { font-size: 24px; font-weight: 700; color: var(--text-primary); }
+    .profile-meta .pid { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .profile-attrs { display: flex; gap: 40px; margin-top: 14px; flex-wrap: wrap; }
+    .profile-attr label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; display: block; }
+    .profile-attr span { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-top: 2px; display: block; }
+    .profile-attr span.highlight { color: var(--brand); }
+
+    /* ── Tab bar ── */
+    .tab-bar {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: flex;
+    }
+    .tab {
+      flex: 1;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.15s;
+    }
+    .tab:hover { color: var(--brand); }
+    .tab.active { color: var(--brand); border-bottom-color: var(--brand); font-weight: 600; }
+
+    /* ── Section card ── */
+    .section-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 28px;
+    }
+    .section-title { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 20px; }
+
+    /* ── Overview grid ── */
+    .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    @media (max-width: 768px) { .overview-grid { grid-template-columns: 1fr; } }
+
+    /* ── Info rows ── */
+    .info-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .label { color: var(--text-muted); }
+    .info-row .value { font-weight: 600; color: var(--text-primary); text-align: right; }
+
+    /* ── Stat cards ── */
+    .stat-card {
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .stat-card:last-child { margin-bottom: 0; }
+    .stat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 4px; }
+    .stat-value { font-size: 28px; font-weight: 800; color: var(--brand); }
+    .stat-value.blue { color: #3b82f6; }
+    .stat-icon { font-size: 24px; color: #cbd5e1; }
+
+    /* ── Certifications ── */
+    .cert-item { display: flex; gap: 10px; margin-bottom: 14px; }
+    .cert-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); margin-top: 3px; flex-shrink: 0; }
+    .cert-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .cert-org { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+
+    /* ── Badge ── */
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+    .badge-success { background: #dcfce7; color: #166534; }
+    .badge-premium { background: #dcfce7; color: #166534; }
+
+    /* ── Edit button ── */
+    .btn-edit {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--brand); color: white;
+      padding: 10px 20px; border-radius: 8px;
+      font-weight: 600; font-size: 14px;
+      cursor: pointer; border: none; margin-top: 20px;
+      transition: background 0.2s;
+    }
+    .btn-edit:hover { background: var(--brand-dark); }
+
+    /* ── Finance: revenue metric cards ── */
+    .revenue-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 900px) { .revenue-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .revenue-grid { grid-template-columns: repeat(2, 1fr); } }
+    .rev-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .rev-card-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 6px; }
+    .rev-card-amount { font-size: 22px; font-weight: 800; }
+    .rev-card-amount.green { color: #22c55e; }
+    .rev-card-amount.blue { color: #3b82f6; }
+    .rev-card-amount.orange { color: var(--brand); }
+    .rev-card-amount.purple { color: #8b5cf6; }
+    .rev-card-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .rev-card-sub.green { color: #22c55e; }
+
+    /* ── Subscription status ── */
+    .sub-section {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .sub-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .sub-header-title { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+    .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .sub-grid { grid-template-columns: 1fr; } }
+    .sub-box { background: #f8fafc; border-radius: 8px; padding: 16px; }
+    .sub-box-label { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+    .sub-box-value { font-size: 20px; font-weight: 800; color: var(--text-primary); }
+    .sub-box-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .sub-link { color: var(--brand); font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 10px; display: inline-block; }
+    .sharing-pct { font-size: 24px; font-weight: 800; color: var(--brand); }
+
+    /* ── Transactions table ── */
+    .txn-header {
+      background: #1e293b;
+      color: white;
+      border-radius: 10px 10px 0 0;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .btn-export {
+      background: white; color: #1e293b;
+      padding: 6px 14px; border-radius: 6px;
+      font-size: 12px; font-weight: 700;
+      border: none; cursor: pointer;
+    }
+    .txn-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .txn-table th {
+      text-align: left; font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--text-muted); padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .txn-table td { padding: 13px 20px; border-bottom: 1px solid #f1f5f9; color: var(--text-primary); }
+    .txn-table tr:last-child td { border-bottom: none; }
+    .badge-paid { background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+    .txn-amount { color: var(--brand); font-weight: 700; }
+
+    /* ── Settings ── */
+    .pref-section { margin-bottom: 28px; }
+    .pref-section-title { font-size: 14px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .pref-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px; border: 1px solid var(--border);
+      border-radius: 10px; margin-bottom: 10px;
+    }
+    .pref-name { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+    .pref-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .pref-clickable { cursor: pointer; }
+    .pref-arrow { color: var(--text-muted); font-size: 14px; }
+    .status-dot { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--brand); }
+    .status-dot::before { content: ''; width: 8px; height: 8px; background: var(--brand); border-radius: 50%; display: inline-block; }
+    .checkbox-anava {
+      width: 20px; height: 20px;
+      border-radius: 4px; border: 2px solid var(--border);
+      background: white; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+    }
+    .checkbox-anava.checked { background: var(--brand); border-color: var(--brand); }
+    .checkbox-anava.checked::after { content: '✓'; color: white; font-size: 12px; font-weight: 700; }
+
+    .btn-save {
+      width: 100%; padding: 16px;
+      background: var(--brand); color: white;
+      font-size: 15px; font-weight: 700;
+      border: none; border-radius: 10px;
+      cursor: pointer; margin-top: 8px;
+      transition: background 0.2s;
+    }
+    .btn-save:hover { background: var(--brand-dark); }
+
+    /* ── Partnership placeholder ── */
+    .partner-card {
+      background: #f8fafc; border: 2px dashed var(--border);
+      border-radius: 12px; padding: 48px;
+      text-align: center; color: var(--text-muted);
+    }
+    .partner-card i { font-size: 36px; margin-bottom: 12px; color: #cbd5e1; }
+
+    /* ── Tab panels ── */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+  </style>
+</head>
+<body>
+  <div style="max-width: 1000px; margin: 0 auto; padding: 32px 20px;">
+
+    <!-- ── Profile Header ── -->
+    <div class="profile-header" style="margin-bottom: 20px;">
+      <div class="profile-avatar">
+        <i class="fa-solid fa-stethoscope"></i>
+      </div>
+      <div class="profile-meta">
+        <h1>Dr. James Wilson</h1>
+        <p class="pid">ID: DOC-001</p>
+        <div class="profile-attrs">
+          <div class="profile-attr">
+            <label>Specialization</label>
+            <span>Neurologist</span>
+          </div>
+          <div class="profile-attr">
+            <label>Clinic</label>
+            <span class="highlight">Anava London</span>
+          </div>
+          <div class="profile-attr">
+            <label>Country</label>
+            <span>UK</span>
+          </div>
+          <div class="profile-attr">
+            <label>Status</label>
+            <span class="highlight">Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Tab Bar ── -->
+    <div class="tab-bar" style="margin-bottom: 20px;">
+      <div class="tab active" onclick="switchTab('overview', this)">
+        <i class="fa-regular fa-user"></i> Overview
+      </div>
+      <div class="tab" onclick="switchTab('finance', this)">
+        <i class="fa-solid fa-wallet"></i> Finance
+      </div>
+      <div class="tab" onclick="switchTab('settings', this)">
+        <i class="fa-solid fa-gear"></i> Settings
+      </div>
+      <div class="tab" onclick="switchTab('partnership', this)">
+        <i class="fa-solid fa-handshake"></i> Partnership
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TAB: OVERVIEW                           -->
+    <!-- ═══════════════════════════════════════ -->
+    <div id="panel-overview" class="tab-panel active">
+      <div class="section-card">
+        <div class="overview-grid">
+
+          <!-- Left: Professional Information -->
+          <div>
+            <div class="section-title">Professional Information</div>
+            <div class="info-row"><span class="label">Full Name</span><span class="value">Dr. James Wilson</span></div>
+            <div class="info-row"><span class="label">Email</span><span class="value">doctor@anava.com</span></div>
+            <div class="info-row"><span class="label">Specialty</span><span class="value">Neurology</span></div>
+            <div class="info-row"><span class="label">Sub-Specialty</span><span class="value">Neuromodulation</span></div>
+            <div class="info-row"><span class="label">License Number</span><span class="value">UK-NEU-2024-8891</span></div>
+            <div class="info-row"><span class="label">Medical Degree</span><span class="value">MD, PhD</span></div>
+            <div class="info-row"><span class="label">University</span><span class="value">University of London</span></div>
+            <div class="info-row"><span class="label">Years of Experience</span><span class="value">15 years</span></div>
+            <div class="info-row"><span class="label">Clinic / Practice</span><span class="value">Anava London</span></div>
+            <div class="info-row"><span class="label">Country</span><span class="value">UK</span></div>
+            <div class="info-row"><span class="label">Phone</span><span class="value">+44 20 7946 0958</span></div>
+            <div class="info-row"><span class="label">Languages</span><span class="value">English, German, Spanish</span></div>
+            <div class="info-row"><span class="label">Joined</span><span class="value">January 15, 2024</span></div>
+            <div class="info-row">
+              <span class="label">Status</span>
+              <span class="value"><span class="badge badge-success">Active</span></span>
+            </div>
+            <button class="btn-edit"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+          </div>
+
+          <!-- Right: Practice Statistics + Certifications -->
+          <div>
+            <div class="section-title">Practice Statistics</div>
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Patients</div>
+                <div class="stat-value blue">2000</div>
+              </div>
+              <i class="fa-solid fa-users stat-icon"></i>
+            </div>
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Assessments Completed</div>
+                <div class="stat-value">47</div>
+              </div>
+              <i class="fa-solid fa-clipboard-check stat-icon"></i>
+            </div>
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Success Rate</div>
+                <div class="stat-value">94%</div>
+              </div>
+              <i class="fa-solid fa-chart-line stat-icon"></i>
+            </div>
+
+            <div class="section-title" style="margin-top: 24px;">Certifications &amp; Training</div>
+            <div class="cert-item">
+              <div class="cert-dot"></div>
+              <div>
+                <div class="cert-name">Board Certified Neurologist</div>
+                <div class="cert-org">Royal College of Physicians, 2010</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-dot"></div>
+              <div>
+                <div class="cert-name">FNON Assessment Specialist</div>
+                <div class="cert-org">Anava Brain Center, 2024</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-dot"></div>
+              <div>
+                <div class="cert-name">Advanced Brain Mapping</div>
+                <div class="cert-org">International Brain Institute, 2022</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-dot"></div>
+              <div>
+                <div class="cert-name">Neuromodulation Therapy</div>
+                <div class="cert-org">European Neuro Society, 2021</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TAB: FINANCE                            -->
+    <!-- ═══════════════════════════════════════ -->
+    <div id="panel-finance" class="tab-panel">
+
+      <!-- Revenue & Earnings section -->
+      <div class="section-card" style="margin-bottom: 20px;">
+        <div class="section-title">Revenue &amp; Earnings</div>
+
+        <div class="revenue-grid">
+          <div class="rev-card">
+            <div class="rev-card-label">Total Revenue</div>
+            <div class="rev-card-amount green">€45,890</div>
+            <div class="rev-card-sub green">↑ +12% vs last month</div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-card-label">Patient Revenue</div>
+            <div class="rev-card-amount blue">€32,150</div>
+            <div class="rev-card-sub">From 2000 patients</div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-card-label">Commission</div>
+            <div class="rev-card-amount orange">€6,883</div>
+            <div class="rev-card-sub">15% revenue share</div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-card-label">Pending</div>
+            <div class="rev-card-amount purple">€6,857</div>
+            <div class="rev-card-sub">Next payout: Jan 5</div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-card-label">Anava Payments</div>
+            <div class="rev-card-amount orange">€13,740</div>
+            <div class="rev-card-sub" style="color:var(--brand)">🧡 Platform earnings</div>
+          </div>
+        </div>
+
+        <!-- Subscription Status -->
+        <div class="sub-section">
+          <div class="sub-header">
+            <div class="sub-header-title">Subscription Status</div>
+            <span class="badge badge-premium">Premium Tier</span>
+          </div>
+          <div class="sub-grid">
+            <div class="sub-box">
+              <div class="sub-box-label">Current Plan</div>
+              <div class="sub-box-value">Anava Professional</div>
+              <div class="sub-box-sub">€199/month &bull; Renews Feb 1, 2025</div>
+              <span class="sub-link">View Payment Details</span>
+            </div>
+            <div class="sub-box">
+              <div class="sub-box-label">Revenue Sharing</div>
+              <div class="sharing-pct">85% / 15%</div>
+              <div class="sub-box-sub">You keep 85% of patient fees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Transactions -->
+      <div style="border-radius: 10px; overflow: hidden; border: 1px solid var(--border);">
+        <div class="txn-header">
+          <span>Recent Transactions</span>
+          <button class="btn-export">Export</button>
+        </div>
+        <table class="txn-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Patient</th>
+              <th>Service</th>
+              <th>Amount</th>
+              <th>Commission</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dec 28, 2024</td>
+              <td>Alex Johnson</td>
+              <td>FNON Assessment</td>
+              <td class="txn-amount">€250.00</td>
+              <td>€37.50</td>
+              <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>Dec 26, 2024</td>
+              <td>Maria Gomez</td>
+              <td>Brain Mapping</td>
+              <td class="txn-amount">€380.00</td>
+              <td>€57.00</td>
+              <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>Dec 24, 2024</td>
+              <td>Liam Smith</td>
+              <td>PRS Assessment</td>
+              <td class="txn-amount">€180.00</td>
+              <td>€27.00</td>
+              <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>Dec 20, 2024</td>
+              <td>Sophie Turner</td>
+              <td>Neuro Consultation</td>
+              <td class="txn-amount">€220.00</td>
+              <td>€33.00</td>
+              <td><span class="badge-paid">Paid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TAB: SETTINGS                           -->
+    <!-- ═══════════════════════════════════════ -->
+    <div id="panel-settings" class="tab-panel">
+      <div class="section-card">
+        <div class="section-title">Account Settings</div>
+
+        <!-- Notification Preferences -->
+        <div class="pref-section">
+          <div class="pref-section-title">Notification Preferences</div>
+
+          <div class="pref-row">
+            <div>
+              <div class="pref-name">New Patient Appointments</div>
+              <div class="pref-desc">Email notification for new bookings</div>
+            </div>
+            <div class="checkbox-anava checked" onclick="toggleCheck(this)"></div>
+          </div>
+
+          <div class="pref-row">
+            <div>
+              <div class="pref-name">Revenue Updates</div>
+              <div class="pref-desc">Weekly revenue summaries</div>
+            </div>
+            <div class="checkbox-anava checked" onclick="toggleCheck(this)"></div>
+          </div>
+
+          <div class="pref-row">
+            <div>
+              <div class="pref-name">Platform Updates</div>
+              <div class="pref-desc">New features and announcements</div>
+            </div>
+            <div class="checkbox-anava" onclick="toggleCheck(this)"></div>
+          </div>
+        </div>
+
+        <!-- Security Settings -->
+        <div class="pref-section">
+          <div class="pref-section-title">Security Settings</div>
+
+          <div class="pref-row pref-clickable">
+            <div>
+              <div class="pref-name">Change Password</div>
+              <div class="pref-desc">Last changed: 30 days ago</div>
+            </div>
+            <i class="fa-solid fa-chevron-right pref-arrow"></i>
+          </div>
+
+          <div class="pref-row pref-clickable">
+            <div>
+              <div class="pref-name">Two-Factor Authentication</div>
+              <span class="status-dot">Enabled</span>
+            </div>
+            <i class="fa-solid fa-chevron-right pref-arrow"></i>
+          </div>
+
+          <div class="pref-row pref-clickable">
+            <div>
+              <div class="pref-name">Active Sessions</div>
+              <div class="pref-desc">Manage logged-in devices</div>
+            </div>
+            <i class="fa-solid fa-chevron-right pref-arrow"></i>
+          </div>
+        </div>
+
+        <button class="btn-save">Save Settings</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TAB: PARTNERSHIP                        -->
+    <!-- ═══════════════════════════════════════ -->
+    <div id="panel-partnership" class="tab-panel">
+      <div class="section-card">
+        <div class="partner-card">
+          <i class="fa-solid fa-handshake"></i>
+          <div style="font-size: 18px; font-weight: 700; color: #475569; margin-bottom: 8px;">Partnership Programme</div>
+          <div style="font-size: 14px;">Partner details and referral information will appear here.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <script>
+    function switchTab(name, el) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('panel-' + name).classList.add('active');
+    }
+    function toggleCheck(el) {
+      el.classList.toggle('checked');
+    }
+  </script>
+</body>
+</html>

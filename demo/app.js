@@ -1,5 +1,5 @@
-/**
- * SOZO DEMO — UI & RENDERING LAYER
+﻿/**
+ * ANAVA DEMO — UI & RENDERING LAYER
  * 
  * This file handles ONLY UI orchestration and module coordination.
  * Individual modules handle their own rendering.
@@ -133,7 +133,7 @@ function renderMainContent() {
   el.innerHTML = '';
 
   if (!AppState.app.currentRole) {
-    el.innerHTML = '<div class="card"><h3>Welcome to Sozo Demo</h3><p class="small">Select a role from the sidebar to begin.</p></div>';
+    el.innerHTML = '<div class="card"><h3>Welcome to Anava Demo</h3><p class="small">Select a role from the sidebar to begin.</p></div>';
     return;
   }
 

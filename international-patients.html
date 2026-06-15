@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>International Patient Assessment | Sozo Brain Center</title>
+  <title>International Patient Assessment | Anava</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
@@ -12,17 +12,17 @@
       theme: {
         extend: {
           colors: {
-            sozo: {
+            anava: {
               50: '#fff7ed',
               100: '#ffedd5',
               200: '#fed7aa',
-              500: '#f97316',
-              600: 'rgb(244, 121, 32)',
-              700: 'rgb(202, 65, 12)',
+              500: '#0052a2',
+              600: 'rgb(0, 82, 162)',
+              700: 'rgb(0, 60, 120)',
             },
             brand: {
-              orange: 'rgb(244, 121, 32)',
-              'orange-dark': 'rgb(202, 65, 12)',
+              orange: 'rgb(0, 82, 162)',
+              'orange-dark': 'rgb(0, 60, 120)',
               blue: 'rgb(0, 161, 228)',
               'blue-dark': 'rgb(0, 130, 185)',
             }
@@ -36,9 +36,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
     :root {
-      --orange-primary: rgb(244, 121, 32);
-      --orange-dark: rgb(202, 65, 12);
-      --orange-light: rgba(244, 121, 32, 0.1);
+      --anava-blue: rgb(0, 82, 162);
+      --anava-blue-dark: rgb(0, 60, 120);
+      --anava-blue-light: rgba(0, 82, 162, 0.1);
       --blue-primary: rgb(0, 161, 228);
       --blue-dark: rgb(0, 130, 185);
       --blue-light: rgba(0, 161, 228, 0.1);
@@ -56,14 +56,14 @@
     
     .disease-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(244, 121, 32, 0.15);
-      border-color: var(--orange-primary);
+      box-shadow: 0 12px 24px rgba(0, 82, 162, 0.15);
+      border-color: var(--anava-blue);
     }
     
     .disease-card.selected {
-      border-color: var(--orange-primary);
-      background: linear-gradient(135deg, var(--orange-light) 0%, rgba(0, 161, 228, 0.05) 100%);
-      box-shadow: 0 8px 20px rgba(244, 121, 32, 0.2);
+      border-color: var(--anava-blue);
+      background: linear-gradient(135deg, var(--anava-blue-light) 0%, rgba(0, 161, 228, 0.05) 100%);
+      box-shadow: 0 8px 20px rgba(0, 82, 162, 0.2);
     }
     
     .radio-option {
@@ -78,13 +78,13 @@
     
     .radio-option:hover {
       background-color: #f1f5f9;
-      border-color: var(--orange-primary);
+      border-color: var(--anava-blue);
     }
     
     input[type="radio"]:checked + .radio-label {
-      background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+      background: linear-gradient(135deg, var(--anava-blue) 0%, var(--anava-blue-dark) 100%);
       color: white;
-      border-color: var(--orange-primary);
+      border-color: var(--anava-blue);
       font-weight: 600;
     }
     
@@ -105,7 +105,7 @@
     }
     
     .progress-step.completed:after {
-      background: var(--orange-primary);
+      background: var(--anava-blue);
     }
     
     .progress-circle {
@@ -124,15 +124,15 @@
     }
     
     .progress-step.active .progress-circle {
-      background: var(--orange-primary);
-      border-color: var(--orange-primary);
+      background: var(--anava-blue);
+      border-color: var(--anava-blue);
       color: white;
-      box-shadow: 0 0 0 4px rgba(244, 121, 32, 0.2);
+      box-shadow: 0 0 0 4px rgba(0, 82, 162, 0.2);
     }
     
     .progress-step.completed .progress-circle {
-      background: var(--orange-primary);
-      border-color: var(--orange-primary);
+      background: var(--anava-blue);
+      border-color: var(--anava-blue);
       color: white;
     }
     
@@ -150,7 +150,7 @@
     }
     
     .btn-primary {
-      background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+      background: linear-gradient(135deg, var(--anava-blue) 0%, var(--anava-blue-dark) 100%);
       color: white;
       padding: 8px 20px;
       border-radius: 8px;
@@ -162,7 +162,7 @@
     }
     
     .btn-primary:hover:not(:disabled) {
-      box-shadow: 0 4px 12px rgba(244, 121, 32, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 82, 162, 0.3);
       transform: translateY(-1px);
     }
     
@@ -184,8 +184,8 @@
     }
     
     .btn-secondary:hover {
-      border-color: var(--orange-primary);
-      color: var(--orange-primary);
+      border-color: var(--anava-blue);
+      color: var(--anava-blue);
     }
     
     .metric-card {
@@ -211,11 +211,11 @@
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 md:p-6 mb-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-gradient-to-br from-sozo-600 to-sozo-700 rounded-lg flex items-center justify-center">
+          <div class="w-10 h-10 bg-gradient-to-br from-anava-600 to-anava-700 rounded-lg flex items-center justify-center">
             <i class="fas fa-brain text-white text-lg"></i>
           </div>
           <div>
-            <h1 class="text-xl font-bold text-slate-900">Sozo Brain Center</h1>
+            <h1 class="text-xl font-bold text-slate-900">Anava</h1>
             <p class="text-xs text-slate-500">International Patient Assessment</p>
           </div>
         </div>
@@ -229,10 +229,10 @@
     <!-- Start Screen -->
     <div id="startScreen" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 fade-in">
       <div class="text-center mb-8">
-        <div class="w-16 h-16 bg-gradient-to-br from-sozo-600 to-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+        <div class="w-16 h-16 bg-gradient-to-br from-anava-600 to-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
           <i class="fas fa-globe text-white text-2xl"></i>
         </div>
-        <h2 class="text-2xl font-bold text-slate-900 mb-2">Welcome to Sozo Brain Center</h2>
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Welcome to Anava</h2>
         <p class="text-sm text-slate-600 max-w-2xl mx-auto">
           We're excited to learn about your medical needs. This brief assessment helps us understand your condition and determine how we can best support your journey to better health.
         </p>
@@ -240,7 +240,7 @@
 
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="bg-slate-50 rounded-lg p-4 text-center border border-slate-200">
-          <i class="fas fa-clock text-sozo-600 text-xl mb-2"></i>
+          <i class="fas fa-clock text-anava-600 text-xl mb-2"></i>
           <p class="text-xs font-semibold text-slate-700">10-15 Minutes</p>
           <p class="text-xs text-slate-500">Estimated time</p>
         </div>
@@ -250,7 +250,7 @@
           <p class="text-xs text-slate-500">Your privacy matters</p>
         </div>
         <div class="bg-slate-50 rounded-lg p-4 text-center border border-slate-200">
-          <i class="fas fa-headset text-sozo-600 text-xl mb-2"></i>
+          <i class="fas fa-headset text-anava-600 text-xl mb-2"></i>
           <p class="text-xs font-semibold text-slate-700">Expert Review</p>
           <p class="text-xs text-slate-500">Within 24-48 hours</p>
         </div>
@@ -279,7 +279,7 @@
         <div class="disease-card rounded-xl p-5" onclick="selectDisease('parkinsons')">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-person-walking text-sozo-600 text-xl"></i>
+              <i class="fas fa-person-walking text-anava-600 text-xl"></i>
             </div>
             <div class="flex-1">
               <h3 class="text-base font-bold text-slate-900 mb-1">Parkinson's Disease</h3>
@@ -496,11 +496,11 @@
             <div class="metric-card">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-xs text-slate-600">Clinical Relevance</span>
-                <i class="fas fa-stethoscope text-sozo-600"></i>
+                <i class="fas fa-stethoscope text-anava-600"></i>
               </div>
               <div class="text-2xl font-bold text-slate-900 mb-1" id="clinicalScore">--</div>
               <div class="w-full bg-slate-200 rounded-full h-1.5">
-                <div class="bg-gradient-to-r from-sozo-600 to-sozo-700 h-1.5 rounded-full" id="clinicalBar" style="width: 0%"></div>
+                <div class="bg-gradient-to-r from-anava-600 to-anava-700 h-1.5 rounded-full" id="clinicalBar" style="width: 0%"></div>
               </div>
               <p class="text-xs text-slate-500 mt-1" id="clinicalLabel">--</p>
             </div>
@@ -533,10 +533,10 @@
           </div>
 
           <!-- Overall Recommendation -->
-          <div class="bg-gradient-to-r from-sozo-50 to-blue-50 rounded-lg p-4 border border-sozo-200">
+          <div class="bg-gradient-to-r from-anava-50 to-blue-50 rounded-lg p-4 border border-anava-200">
             <div class="flex items-start gap-3">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-star text-sozo-600"></i>
+                <i class="fas fa-star text-anava-600"></i>
               </div>
               <div class="flex-1">
                 <h4 class="text-sm font-bold text-slate-900 mb-1">Overall Qualification</h4>
@@ -549,7 +549,7 @@
           <!-- Clinical Notes -->
           <div class="mt-4 bg-slate-50 rounded-lg p-4">
             <h4 class="text-xs font-bold text-slate-900 mb-2 flex items-center gap-2">
-              <i class="fas fa-notes-medical text-sozo-600"></i>
+              <i class="fas fa-notes-medical text-anava-600"></i>
               Clinical Summary Notes
             </h4>
             <div class="text-xs text-slate-700 space-y-1" id="clinicalNotes">
@@ -564,8 +564,8 @@
         <h3 class="text-sm font-bold text-slate-900 mb-4">What Happens Next?</h3>
         <div class="space-y-4">
           <div class="flex gap-4">
-            <div class="w-8 h-8 bg-sozo-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="text-xs font-bold text-sozo-600">1</span>
+            <div class="w-8 h-8 bg-anava-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-xs font-bold text-anava-600">1</span>
             </div>
             <div>
               <h4 class="text-sm font-semibold text-slate-900">Medical Review</h4>
@@ -661,7 +661,7 @@
             questions: [
               { id: 'pd_goals', text: 'What is your primary treatment goal?', options: ['Reduce tremor/motor symptoms', 'Improve mobility and balance', 'Better quality of life', 'Slow disease progression', 'All of the above'] },
               { id: 'pd_funding', text: 'How do you plan to fund treatment?', options: ['Self-funded', 'Insurance coverage', 'Combination', 'Seeking financial assistance', 'Not sure yet'] },
-              { id: 'pd_commitment', text: 'How committed are you to pursuing treatment at Sozo?', options: ['Very committed, ready to proceed', 'Highly interested, need more info', 'Moderately interested', 'Just exploring options'] }
+              { id: 'pd_commitment', text: 'How committed are you to pursuing treatment at Anava?', options: ['Very committed, ready to proceed', 'Highly interested, need more info', 'Moderately interested', 'Just exploring options'] }
             ]
           }
         ]
@@ -1312,7 +1312,7 @@
       // Overall category
       document.getElementById('overallCategory').textContent = scores.category;
       document.getElementById('overallCategory').className = scores.total >= 25 ? 'text-2xl font-bold mb-2 text-green-600' : 
-                                                               scores.total >= 18 ? 'text-2xl font-bold mb-2 text-sozo-600' : 
+                                                               scores.total >= 18 ? 'text-2xl font-bold mb-2 text-anava-600' : 
                                                                'text-2xl font-bold mb-2 text-slate-700';
       document.getElementById('recommendedAction').textContent = scores.action;
       
@@ -1327,15 +1327,15 @@
       const answers = assessmentState.answers;
       const notes = [];
       
-      notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-sozo-600 text-xs mt-1"></i><span><strong>Condition:</strong> ${disease}</span></div>`);
-      notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-sozo-600 text-xs mt-1"></i><span><strong>Submission:</strong> ${assessmentState.submissionId} on ${new Date().toLocaleDateString('en-GB')}</span></div>`);
+      notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-anava-600 text-xs mt-1"></i><span><strong>Condition:</strong> ${disease}</span></div>`);
+      notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-anava-600 text-xs mt-1"></i><span><strong>Submission:</strong> ${assessmentState.submissionId} on ${new Date().toLocaleDateString('en-GB')}</span></div>`);
       
       // Add disease-specific notes
       if (assessmentState.selectedDisease === 'parkinsons') {
-        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-sozo-600 text-xs mt-1"></i><span><strong>Diagnosis:</strong> ${answers.pd_diagnosis || 'Not specified'}</span></div>`);
-        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-sozo-600 text-xs mt-1"></i><span><strong>Duration:</strong> ${answers.pd_duration || 'Not specified'}</span></div>`);
-        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-sozo-600 text-xs mt-1"></i><span><strong>Stage:</strong> ${answers.pd_stage || 'Not specified'}</span></div>`);
-        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-sozo-600 text-xs mt-1"></i><span><strong>Primary Goal:</strong> ${answers.pd_goals || 'Not specified'}</span></div>`);
+        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-anava-600 text-xs mt-1"></i><span><strong>Diagnosis:</strong> ${answers.pd_diagnosis || 'Not specified'}</span></div>`);
+        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-anava-600 text-xs mt-1"></i><span><strong>Duration:</strong> ${answers.pd_duration || 'Not specified'}</span></div>`);
+        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-anava-600 text-xs mt-1"></i><span><strong>Stage:</strong> ${answers.pd_stage || 'Not specified'}</span></div>`);
+        notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-anava-600 text-xs mt-1"></i><span><strong>Primary Goal:</strong> ${answers.pd_goals || 'Not specified'}</span></div>`);
       }
       
       notes.push(`<div class="flex gap-2"><i class="fas fa-circle text-brand-blue text-xs mt-1"></i><span><strong>Action Required:</strong> Review full assessment and initiate contact per priority level</span></div>`);
@@ -1348,7 +1348,7 @@
     // ========================================
     function autoSave() {
       try {
-        localStorage.setItem('sozo_intl_assessment_draft', JSON.stringify(assessmentState));
+        localStorage.setItem('anava_intl_assessment_draft', JSON.stringify(assessmentState));
         console.log('✓ Auto-saved');
       } catch (e) {
         console.error('Auto-save failed:', e);
@@ -1357,7 +1357,7 @@
 
     function loadDraft() {
       try {
-        const draft = localStorage.getItem('sozo_intl_assessment_draft');
+        const draft = localStorage.getItem('anava_intl_assessment_draft');
         if (draft) {
           const state = JSON.parse(draft);
           // Could prompt user to restore draft here

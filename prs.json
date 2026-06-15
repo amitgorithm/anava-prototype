@@ -1,4 +1,4 @@
-{
+﻿{
   "tinnitus": {
     "title": "Tinnitus Assessment",
     "sections": [
@@ -4964,9 +4964,9 @@
             ]
           },
           {
-            "id": "pd_sozo_id",
+            "id": "pd_anava_id",
             "type": "text",
-            "label": "4. Sozo ID",
+            "label": "4. Anava ID",
             "required": false,
             "showIf": {
               "field": "pd_new_existing",
@@ -8516,7 +8516,7 @@
     ]
   },
   "ibd": {
-    "title": "SOZO Irritable Bowel Disease - PRS Assessment",
+    "title": "ANAVA Irritable Bowel Disease - PRS Assessment",
     "sections": [
       {
         "title": "Section 1 - General Data",
@@ -10548,17 +10548,17 @@
         ]
       },
       {
-        "title": "Section 9 - SOZO Privacy Policy",
+        "title": "Section 9 - Anava Privacy Policy",
         "questions": [
           {
             "id": "privacy_policy_agreement",
             "type": "checkbox",
-            "label": "125. IT IS IMPORTANT THAT YOU READ AND UNDERSTAND THE SOZO PRIVACY POLICY BEFORE SUBMITTING THIS FORM (https://sozobraincenter.com/privacy-policy/). The undersigned acknowledges and confirms that they have read and understood the terms of the SOZO Privacy Policy and that the information provided herein is collected and processed in accordance with the terms of the said policy. *",
+            "label": "125. IT IS IMPORTANT THAT YOU READ AND UNDERSTAND THE ANAVA PRIVACY POLICY BEFORE SUBMITTING THIS FORM (https://anava.com/privacy-policy/). The undersigned acknowledges and confirms that they have read and understood the terms of the Anava Privacy Policy and that the information provided herein is collected and processed in accordance with the terms of the said policy. *",
             "required": true,
             "options": [
               {
                 "value": "agree",
-                "label": "I have read and agree to the SOZO Privacy Policy"
+                "label": "I have read and agree to the Anava Privacy Policy"
               }
             ]
           }

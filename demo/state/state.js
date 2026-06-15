@@ -1,4 +1,4 @@
-/**
+﻿/**
  * GLOBAL APPLICATION STATE
  * Single Source of Truth
  * DO NOT mutate directly outside actions.js
@@ -59,7 +59,7 @@ export const AppState = {
   }
 };
 
-const STORAGE_KEY = 'sozoDemoState_v2';
+const STORAGE_KEY = 'anavaDemoState_v2';
 
 /**
  * Load state from localStorage

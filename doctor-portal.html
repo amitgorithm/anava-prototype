@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Portal - Sozo Clinical Operating System</title>
+    <title>Doctor Portal - Anava Clinical Operating System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --orange-primary: rgb(244, 121, 32);
+            --anava-blue: rgb(0, 82, 162);
             --blue-primary: rgb(0, 161, 228);
             --dark-bg: #0f172a;
             --light-bg: #f8f9fa;
@@ -44,7 +44,7 @@
         }
 
         .assessment-section.expanded {
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
         }
 
         .assessment-header {
@@ -57,7 +57,7 @@
         }
 
         .assessment-header:hover {
-            background: rgba(244, 121, 32, 0.05);
+            background: rgba(0, 82, 162, 0.05);
         }
 
         .assessment-title {
@@ -95,8 +95,8 @@
         }
 
         .assessment-badge.completed {
-            background: rgba(244, 121, 32, 0.15);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.15);
+            color: var(--anava-blue);
         }
 
         .assessment-content {
@@ -148,14 +148,14 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             border-radius: 12px 12px 0 0;
         }
 
         .block-icon {
             font-size: 32px;
             margin-bottom: 12px;
-            color: var(--orange-primary);
+            color: var(--anava-blue);
         }
 
         .block-name {
@@ -175,8 +175,8 @@
             padding: 4px 8px;
             border-radius: 4px;
             margin-top: 8px;
-            background: rgba(244, 121, 32, 0.1);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.1);
+            color: var(--anava-blue);
             font-weight: 600;
         }
 
@@ -210,12 +210,12 @@
         }
 
         .block-action-btn.edit {
-            background: rgba(244, 121, 32, 0.1);
-            color: var(--orange-primary);
+            background: rgba(0, 82, 162, 0.1);
+            color: var(--anava-blue);
         }
 
         .block-action-btn.edit:hover {
-            background: rgba(244, 121, 32, 0.2);
+            background: rgba(0, 82, 162, 0.2);
         }
 
         /* MODALS */
@@ -297,12 +297,12 @@
 
         .form-input:focus {
             outline: none;
-            border-color: var(--orange-primary);
-            box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.1);
+            border-color: var(--anava-blue);
+            box-shadow: 0 0 0 3px rgba(0, 82, 162, 0.1);
         }
 
         .btn-primary {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             color: white;
             padding: 12px 24px;
             border-radius: 8px;
@@ -410,7 +410,7 @@
     <div id="fnonAssessmentModal" class="assessment-modal" onclick="if(event.target === this) closeAssessmentModal('fnon')" style="display: none;">
         <div class="assessment-modal-content" onclick="event.stopPropagation()">
             <div class="assessment-modal-header">
-                <h2><i class="fas fa-list-check" style="color: var(--orange-primary); margin-right: 12px;"></i>FNON Assessment - Network Analysis</h2>
+                <h2><i class="fas fa-list-check" style="color: var(--anava-blue); margin-right: 12px;"></i>FNON Assessment - Network Analysis</h2>
                 <button class="assessment-modal-close" onclick="closeAssessmentModal('fnon')" title="Close assessment">
                     <i class="fa-solid fa-times"></i>
                 </button>
@@ -425,7 +425,7 @@
     <div id="prsAssessmentModal" class="assessment-modal" onclick="if(event.target === this) closeAssessmentModal('prs')" style="display: none;">
         <div class="assessment-modal-content" onclick="event.stopPropagation()">
             <div class="assessment-modal-header">
-                <h2><i class="fas fa-clipboard-list" style="color: var(--orange-primary); margin-right: 12px;"></i>PRS Assessment - Patient Reported Symptoms</h2>
+                <h2><i class="fas fa-clipboard-list" style="color: var(--anava-blue); margin-right: 12px;"></i>PRS Assessment - Patient Reported Symptoms</h2>
                 <button class="assessment-modal-close" onclick="closeAssessmentModal('prs')" title="Close assessment">
                     <i class="fa-solid fa-times"></i>
                 </button>
@@ -440,7 +440,7 @@
     <div id="doctorNotesModal" class="assessment-modal" onclick="if(event.target === this) closeDoctorNotesModal()" style="display: none;">
         <div class="assessment-modal-content" onclick="event.stopPropagation()">
             <div class="assessment-modal-header">
-                <h2><i class="fas fa-comment-medical" style="color: var(--orange-primary); margin-right: 12px;"></i>Doctor's Notes - Clinical Assessment</h2>
+                <h2><i class="fas fa-comment-medical" style="color: var(--anava-blue); margin-right: 12px;"></i>Doctor's Notes - Clinical Assessment</h2>
                 <button class="assessment-modal-close" onclick="closeDoctorNotesModal()" title="Close notes">
                     <i class="fa-solid fa-times"></i>
                 </button>
@@ -528,11 +528,11 @@
                 <div class="assessment-section expanded" id="deepDiveSection">
                     <div class="assessment-header" onclick="toggleSection('deepDiveSection')">
                         <div class="assessment-title">
-                            <span style="font-size: 24px; color: var(--orange-primary);"><i class="fas fa-folder-open"></i></span>
+                            <span style="font-size: 24px; color: var(--anava-blue);"><i class="fas fa-folder-open"></i></span>
                             <div>
                                 <h2>Clinical Case Assessment</h2>
                                 <div class="assessment-meta">
-                                    <div class="meta-item"><i class="fas fa-check-circle" style="color: var(--orange-primary);"></i> All Assessments Complete</div>
+                                    <div class="meta-item"><i class="fas fa-check-circle" style="color: var(--anava-blue);"></i> All Assessments Complete</div>
                                     <div class="meta-item"><i class="fas fa-calendar"></i> Last Updated: 2026-02-01</div>
                                 </div>
                             </div>
@@ -729,7 +729,7 @@
             sections.forEach((section, sIdx) => {
                 html += `
                     <div class="form-field">
-                        <h3 style="font-weight: 700; font-size: 14px; margin-bottom: 12px; color: var(--orange-primary);">${section.title}</h3>
+                        <h3 style="font-weight: 700; font-size: 14px; margin-bottom: 12px; color: var(--anava-blue);">${section.title}</h3>
                         ${section.fields.map((field, fIdx) => {
                             const key = `${sIdx}-${fIdx}`;
                             const value = fnonState.scores[key] || '';
@@ -807,7 +807,7 @@
                     <div class="form-field">
                         <label class="form-label">Current Status</label>
                         <div style="padding: 12px; background: #f8f9fa; border-radius: 8px; font-size: 14px;">
-                            <i class="fas fa-check-circle" style="color: var(--orange-primary); margin-right: 8px;"></i>
+                            <i class="fas fa-check-circle" style="color: var(--anava-blue); margin-right: 8px;"></i>
                             Assessment Completed - 100%
                         </div>
                     </div>

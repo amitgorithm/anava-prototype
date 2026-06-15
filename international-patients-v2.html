@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>International Patient Qualification | Sozo Brain Center</title>
+  <title>International Patient Qualification | Anava</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
@@ -12,15 +12,15 @@
       theme: {
         extend: {
           colors: {
-            sozo: {
+            anava: {
               50: 'rgb(255, 247, 237)',
               100: 'rgb(255, 237, 213)',
               200: 'rgb(254, 215, 170)',
               300: 'rgb(253, 186, 116)',
               400: 'rgb(251, 146, 60)',
               500: 'rgb(249, 115, 22)',
-              600: 'rgb(244, 121, 32)',
-              700: 'rgb(202, 65, 12)',
+              600: 'rgb(0, 82, 162)',
+              700: 'rgb(0, 60, 120)',
             },
             brand: {
               blue: 'rgb(0, 161, 228)',
@@ -36,9 +36,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
     :root {
-      --orange-primary: rgb(244, 121, 32);
-      --orange-dark: rgb(202, 65, 12);
-      --orange-light: rgba(244, 121, 32, 0.1);
+      --anava-blue: rgb(0, 82, 162);
+      --anava-blue-dark: rgb(0, 60, 120);
+      --anava-blue-light: rgba(0, 82, 162, 0.1);
       --blue-primary: rgb(0, 161, 228);
       --blue-dark: rgb(0, 130, 185);
       --blue-light: rgba(0, 161, 228, 0.1);
@@ -82,14 +82,14 @@
     
     .selection-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(244, 121, 32, 0.15);
-      border-color: var(--orange-primary);
+      box-shadow: 0 12px 24px rgba(0, 82, 162, 0.15);
+      border-color: var(--anava-blue);
     }
     
     .selection-card.selected {
-      border-color: var(--orange-primary);
-      background: linear-gradient(135deg, var(--orange-light) 0%, rgba(0, 161, 228, 0.05) 100%);
-      box-shadow: 0 8px 20px rgba(244, 121, 32, 0.2);
+      border-color: var(--anava-blue);
+      background: linear-gradient(135deg, var(--anava-blue-light) 0%, rgba(0, 161, 228, 0.05) 100%);
+      box-shadow: 0 8px 20px rgba(0, 82, 162, 0.2);
     }
     
     .selection-card.selected::after {
@@ -99,7 +99,7 @@
       position: absolute;
       top: 12px;
       right: 12px;
-      color: var(--orange-primary);
+      color: var(--anava-blue);
       font-size: 24px;
     }
     
@@ -112,14 +112,14 @@
     }
     
     .option-card:hover {
-      border-color: var(--orange-primary);
+      border-color: var(--anava-blue);
       background: #fafafa;
     }
     
     .option-card.selected {
-      background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+      background: linear-gradient(135deg, var(--anava-blue) 0%, var(--anava-blue-dark) 100%);
       color: white;
-      border-color: var(--orange-primary);
+      border-color: var(--anava-blue);
     }
     
     .option-card.selected * {
@@ -136,13 +136,13 @@
     
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, var(--orange-primary), var(--orange-dark));
+      background: linear-gradient(90deg, var(--anava-blue), var(--anava-blue-dark));
       transition: width 0.4s ease;
     }
     
     /* Buttons */
     .btn-primary {
-      background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+      background: linear-gradient(135deg, var(--anava-blue) 0%, var(--anava-blue-dark) 100%);
       color: white;
       padding: 12px 32px;
       border-radius: 8px;
@@ -157,7 +157,7 @@
     }
     
     .btn-primary:hover:not(:disabled) {
-      box-shadow: 0 6px 16px rgba(244, 121, 32, 0.4);
+      box-shadow: 0 6px 16px rgba(0, 82, 162, 0.4);
       transform: translateY(-2px);
     }
     
@@ -183,8 +183,8 @@
     }
     
     .btn-secondary:hover {
-      border-color: var(--orange-primary);
-      color: var(--orange-primary);
+      border-color: var(--anava-blue);
+      color: var(--anava-blue);
     }
     
     /* Input styling */
@@ -200,8 +200,8 @@
     
     select:focus, input[type="text"]:focus, textarea:focus {
       outline: none;
-      border-color: var(--orange-primary);
-      box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.1);
+      border-color: var(--anava-blue);
+      box-shadow: 0 0 0 3px rgba(0, 82, 162, 0.1);
     }
     
     textarea {
@@ -226,18 +226,18 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: var(--orange-primary);
+      background: var(--anava-blue);
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(244, 121, 32, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 82, 162, 0.3);
     }
     
     input[type="range"]::-moz-range-thumb {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: var(--orange-primary);
+      background: var(--anava-blue);
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(244, 121, 32, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 82, 162, 0.3);
       border: none;
     }
     
@@ -255,13 +255,13 @@
     }
     
     .checkbox-group label:hover {
-      border-color: var(--orange-primary);
+      border-color: var(--anava-blue);
       background: #fafafa;
     }
     
     .checkbox-group input[type="checkbox"]:checked + span {
       font-weight: 600;
-      color: var(--orange-primary);
+      color: var(--anava-blue);
     }
     
     .checkbox-group input[type="checkbox"] {
@@ -279,11 +279,11 @@
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 md:p-6 mb-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-gradient-to-br from-sozo-600 to-sozo-700 rounded-lg flex items-center justify-center">
+          <div class="w-10 h-10 bg-gradient-to-br from-anava-600 to-anava-700 rounded-lg flex items-center justify-center">
             <i class="fas fa-brain text-white text-lg"></i>
           </div>
           <div>
-            <h1 class="text-xl font-bold text-slate-900">Sozo Brain Center</h1>
+            <h1 class="text-xl font-bold text-slate-900">Anava</h1>
             <p class="text-xs text-slate-500">International Patient Qualification</p>
           </div>
         </div>
@@ -309,10 +309,10 @@
     <div id="stage0" class="stage-container active">
       <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
         <div class="text-center mb-8">
-          <div class="w-16 h-16 bg-gradient-to-br from-sozo-600 to-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-anava-600 to-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-globe text-white text-2xl"></i>
           </div>
-          <h2 class="text-2xl font-bold text-slate-900 mb-2">Welcome to Sozo Brain Center</h2>
+          <h2 class="text-2xl font-bold text-slate-900 mb-2">Welcome to Anava</h2>
           <p class="text-sm text-slate-600 max-w-2xl mx-auto">
             We're here to understand your condition and guide you toward the right next step. This brief assessment helps us determine how we can best support your journey to better health.
           </p>
@@ -320,7 +320,7 @@
 
         <div class="grid md:grid-cols-3 gap-4 mb-8">
           <div class="bg-slate-50 rounded-lg p-4 text-center border border-slate-200">
-            <i class="fas fa-clock text-sozo-600 text-xl mb-2"></i>
+            <i class="fas fa-clock text-anava-600 text-xl mb-2"></i>
             <p class="text-sm font-semibold text-slate-700">10-15 Minutes</p>
             <p class="text-xs text-slate-500">Estimated time</p>
           </div>
@@ -330,7 +330,7 @@
             <p class="text-xs text-slate-500">Your privacy matters</p>
           </div>
           <div class="bg-slate-50 rounded-lg p-4 text-center border border-slate-200">
-            <i class="fas fa-headset text-sozo-600 text-xl mb-2"></i>
+            <i class="fas fa-headset text-anava-600 text-xl mb-2"></i>
             <p class="text-sm font-semibold text-slate-700">Expert Review</p>
             <p class="text-xs text-slate-500">Within 24-48 hours</p>
           </div>
@@ -364,7 +364,7 @@
             <div class="grid md:grid-cols-2 gap-3">
               <div class="option-card rounded-lg p-4" onclick="selectOption('formFiller', 'patient', this)">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-user text-sozo-600 text-xl"></i>
+                  <i class="fas fa-user text-anava-600 text-xl"></i>
                   <div>
                     <p class="font-semibold text-sm">I am the patient</p>
                     <p class="text-xs text-slate-500">Filling for myself</p>
@@ -621,7 +621,7 @@
               <span class="text-xs text-slate-500 flex-shrink-0">Excellent</span>
             </div>
             <div class="text-center mt-2">
-              <span class="text-2xl font-bold text-sozo-600" id="qolValue">5</span>
+              <span class="text-2xl font-bold text-anava-600" id="qolValue">5</span>
               <span class="text-sm text-slate-500">/ 10</span>
             </div>
           </div>
@@ -703,10 +703,10 @@
             </div>
           </div>
 
-          <!-- Why exploring Sozo -->
+          <!-- Why exploring Anava -->
           <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Why are you exploring Sozo now? <span class="text-red-500">*</span></label>
-            <select id="whySozo" onchange="saveAnswer('whySozo', this.value); validateStage4();">
+            <label class="block text-sm font-semibold text-slate-700 mb-2">Why are you exploring Anava now? <span class="text-red-500">*</span></label>
+            <select id="whyAnava" onchange="saveAnswer('whyAnava', this.value); validateStage4();">
               <option value="">Please select</option>
               <option value="plateau">Current treatments have plateaued</option>
               <option value="side-effects">Experiencing side effects from medications</option>
@@ -786,7 +786,7 @@
         <div class="mb-6">
           <div class="bg-gradient-to-r from-orange-50 to-blue-50 border border-orange-200 rounded-lg p-4 mb-4">
             <div class="flex items-start gap-3">
-              <i class="fas fa-lightbulb text-sozo-600 text-xl mt-1"></i>
+              <i class="fas fa-lightbulb text-anava-600 text-xl mt-1"></i>
               <div>
                 <p class="text-sm font-semibold text-slate-900">Important Question</p>
                 <p class="text-xs text-slate-600">This helps us tailor our response to your specific needs and expectations.</p>
@@ -805,7 +805,7 @@
               </div>
               <div class="flex-1">
                 <p class="font-bold text-slate-900 mb-1">Clear expert medical opinion and honest assessment of suitability</p>
-                <p class="text-xs text-slate-600">I want professional guidance on whether Sozo treatment could help my specific condition, with transparent advice on my candidacy.</p>
+                <p class="text-xs text-slate-600">I want professional guidance on whether Anava treatment could help my specific condition, with transparent advice on my candidacy.</p>
               </div>
             </div>
           </div>
@@ -857,7 +857,7 @@
               <i class="fas fa-plane-departure text-brand-blue text-xl mt-1"></i>
               <div>
                 <p class="text-sm font-semibold text-slate-900">Treatment Location</p>
-                <p class="text-xs text-slate-600">Sozo treatment requires physical presence in Cyprus for 2-6 weeks. Let's assess travel feasibility.</p>
+                <p class="text-xs text-slate-600">Anava treatment requires physical presence in Cyprus for 2-6 weeks. Let's assess travel feasibility.</p>
               </div>
             </div>
           </div>
@@ -962,7 +962,7 @@
         <div class="mb-6">
           <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-4 mb-4">
             <div class="flex items-start gap-3">
-              <i class="fas fa-hand-holding-heart text-sozo-600 text-xl mt-1"></i>
+              <i class="fas fa-hand-holding-heart text-anava-600 text-xl mt-1"></i>
               <div>
                 <p class="text-sm font-semibold text-slate-900">Transparent Conversation</p>
                 <p class="text-xs text-slate-600">We believe in being upfront about the financial aspects to ensure we're aligned from the start.</p>
@@ -976,7 +976,7 @@
         <div class="space-y-6">
           <!-- Awareness of private funding -->
           <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-2">Are you aware that treatment at Sozo is privately funded? <span class="text-red-500">*</span></label>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">Are you aware that treatment at Anava is privately funded? <span class="text-red-500">*</span></label>
             <select id="privateFunding" onchange="saveAnswer('privateFunding', this.value); validateStage7();">
               <option value="">Please select</option>
               <option value="yes-aware">Yes, I understand it's private pay</option>
@@ -1175,8 +1175,8 @@
           <h3 class="text-sm font-bold text-slate-900">What happens next?</h3>
           
           <div class="flex gap-4">
-            <div class="flex-shrink-0 w-10 h-10 bg-sozo-100 rounded-full flex items-center justify-center">
-              <span class="font-bold text-sozo-600">1</span>
+            <div class="flex-shrink-0 w-10 h-10 bg-anava-100 rounded-full flex items-center justify-center">
+              <span class="font-bold text-anava-600">1</span>
             </div>
             <div>
               <p class="font-semibold text-sm text-slate-900">Clinical Review</p>
@@ -1200,7 +1200,7 @@
             </div>
             <div>
               <p class="font-semibold text-sm text-slate-900">Next Steps Discussion</p>
-              <p class="text-xs text-slate-600">We'll discuss whether Sozo treatment could help and outline a potential path forward</p>
+              <p class="text-xs text-slate-600">We'll discuss whether Anava treatment could help and outline a potential path forward</p>
             </div>
           </div>
         </div>
@@ -1209,8 +1209,8 @@
         <div class="bg-slate-50 rounded-lg p-4 border border-slate-200 text-center">
           <p class="text-xs text-slate-600 mb-2">Questions in the meantime?</p>
           <p class="text-sm font-semibold text-slate-900">
-            <i class="fas fa-envelope mr-2 text-sozo-600"></i>
-            international@sozobrain.com
+            <i class="fas fa-envelope mr-2 text-anava-600"></i>
+            international@anavabrain.com
           </p>
           <p class="text-sm font-semibold text-slate-900 mt-1">
             <i class="fas fa-phone mr-2 text-brand-blue"></i>
@@ -1484,7 +1484,7 @@
 
     function validateStage4() {
       let valid = state.answers.medications && 
-                  state.answers.whySozo;
+                  state.answers.whyAnava;
       
       // If medications === 'yes', also require effectiveness
       if (state.answers.medications === 'yes') {
@@ -1735,7 +1735,7 @@
     // ========================================
     function autoSave() {
       try {
-        localStorage.setItem('sozo_qualification_v2', JSON.stringify(state));
+        localStorage.setItem('anava_qualification_v2', JSON.stringify(state));
         console.log('✓ Auto-saved');
       } catch (e) {
         console.error('Auto-save failed:', e);
@@ -1766,7 +1766,7 @@
     // INITIALIZATION
     // ========================================
     window.addEventListener('DOMContentLoaded', () => {
-      console.log('Sozo International Patient Qualification v2.0');
+      console.log('Anava International Patient Qualification v2.0');
       console.log('9-stage progressive qualification flow initialized');
     });
   </script>

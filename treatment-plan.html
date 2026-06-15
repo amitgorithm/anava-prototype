@@ -76,7 +76,7 @@
             font-weight: 600;
         }
         
-        .badge-sozo {
+        .badge-anava {
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             color: white;
         }
@@ -166,8 +166,8 @@ let treatmentPlanState = {
 };
 
 // Persistence Logic
-const STORAGE_KEY = 'sozo_treatment_plan';
-const CUSTOM_MONTAGES_KEY = 'sozo_custom_montages';
+const STORAGE_KEY = 'anava_treatment_plan';
+const CUSTOM_MONTAGES_KEY = 'anava_custom_montages';
 
 // Custom Montages Storage
 let customMontagesLibrary = [];
@@ -742,7 +742,7 @@ function renderTreatmentPlan() {
     <div class="card p-6 mb-8 border-l-4 border-l-orange-600 bg-gradient-to-r from-orange-50 to-slate-50">
       <div class="flex items-center justify-between mb-4">
         <h3 class="text-lg font-bold text-orange-900"><i class="fa-solid fa-user-circle mr-2"></i>Patient: ${p.name}</h3>
-        <span class="badge badge-sozo">ID: ${p.id}</span>
+        <span class="badge badge-anava">ID: ${p.id}</span>
       </div>
       <div class="grid grid-cols-3 gap-4 text-sm">
         <div><span class="font-bold text-slate-700">Age:</span> <span class="text-slate-900">${p.age}</span></div>
@@ -832,7 +832,7 @@ function renderTreatmentPlan() {
       <!--for previous treatment plan -->
       <!-- Medication Suggestions Section -->
       <div class="mb-6 bg-slate-50 p-6 rounded-lg border border-slate-200">
-        <h3 class="text-lg font-bold text-slate-900 mb-4 border-b-2 border-sozo-600 pb-2">
+        <h3 class="text-lg font-bold text-slate-900 mb-4 border-b-2 border-anava-600 pb-2">
           <i class="fa-solid fa-pills mr-2"></i>Medication Suggestions
         </h3>
         <div class="space-y-4">
@@ -1035,12 +1035,12 @@ function renderTreatmentPlan() {
         
         // Show success message
         saveBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i>Saved!';
-        saveBtn.classList.remove('bg-sozo-600');
+        saveBtn.classList.remove('bg-anava-600');
         saveBtn.classList.add('bg-green-500');
         setTimeout(() => {
           saveBtn.innerHTML = '<i class="fa-solid fa-save mr-2"></i>Save Treatment Plan';
           saveBtn.classList.remove('bg-green-500');
-          saveBtn.classList.add('bg-sozo-600');
+          saveBtn.classList.add('bg-anava-600');
         }, 2000);
       });
     }

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workshop Details — Sozo Brain Center</title>
+    <title>Workshop Details — Anava</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -15,19 +15,19 @@
             theme: {
                 extend: {
                     colors: {
-                        sozo: {
+                        anava: {
                             50: '#fff7ed',
                             100: '#ffedd5',
                             200: '#fed7aa',
-                            500: '#f97316',
-                            600: 'rgb(244, 121, 32)', // Sozo Primary Orange
-                            700: 'rgb(202, 65, 12)', // Sozo Dark Orange
+                            500: '#0052a2',
+                            600: 'rgb(0, 82, 162)', // Anava Primary Orange
+                            700: 'rgb(0, 60, 120)', // Anava Dark Orange
                             800: '#9a3412',
                             900: '#7c2d12',
                         },
                         brand: {
-                            orange: 'rgb(244, 121, 32)',
-                            'orange-dark': 'rgb(202, 65, 12)',
+                            orange: 'rgb(0, 82, 162)',
+                            'orange-dark': 'rgb(0, 60, 120)',
                             blue: 'rgb(0, 161, 228)',
                             'blue-dark': 'rgb(0, 130, 185)',
                         }
@@ -56,14 +56,14 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, rgb(244, 121, 32) 0%, rgb(202, 65, 12) 100%);
+            background: linear-gradient(135deg, rgb(0, 82, 162) 0%, rgb(0, 60, 120) 100%);
             color: white;
             font-weight: 600;
             transition: all 0.2s;
         }
 
         .btn-primary:hover {
-            box-shadow: 0 4px 12px rgba(244, 121, 32, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 82, 162, 0.3);
             transform: translateY(-1px);
         }
 
@@ -76,12 +76,12 @@
         }
 
         .tab-btn:hover {
-            color: rgb(244, 121, 32);
+            color: rgb(0, 82, 162);
         }
 
         .tab-btn.active {
-            color: rgb(244, 121, 32);
-            border-bottom-color: rgb(244, 121, 32);
+            color: rgb(0, 82, 162);
+            border-bottom-color: rgb(0, 82, 162);
         }
 
         .timeline-item {
@@ -107,8 +107,8 @@
         }
 
         .timeline-item.completed .timeline-dot {
-            background: rgb(244, 121, 32);
-            border-color: rgb(244, 121, 32);
+            background: rgb(0, 82, 162);
+            border-color: rgb(0, 82, 162);
         }
 
         .timeline-item.active .timeline-dot {
@@ -142,14 +142,14 @@
             display: none;
         }
         
-        /* SOZO BRANDING STYLES */
-        .sozo-logo {
+        /* ANAVA BRANDING STYLES */
+        .anava-logo {
             height: 40px;
             width: auto;
             object-fit: contain;
         }
         
-        .sozo-footer {
+        .anava-footer {
             background: #f8fafc;
             border-top: 1px solid #e2e8f0;
             padding: 16px 0;
@@ -174,7 +174,7 @@
                 text-align: center;
             }
             
-            .sozo-logo {
+            .anava-logo {
                 height: 35px;
             }
         }
@@ -187,12 +187,12 @@
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <a href="index.html" class="flex items-center gap-2 text-slate-500 hover:text-sozo-600 transition">
+                <a href="index.html" class="flex items-center gap-2 text-slate-500 hover:text-anava-600 transition">
                     <i class="fa-solid fa-arrow-left"></i>
                     <span class="font-semibold text-sm">Back to Dashboard</span>
                 </a>
                 <div class="h-6 w-px bg-slate-200"></div>
-                <img src="logo1.png" alt="Sozo Logo" class="h-8">
+                <img src="logo1.png" style="display:none" alt="Anava Logo" class="h-8">
             </div>
 
             <div class="flex items-center gap-3">
@@ -222,12 +222,12 @@
                 <h1 class="text-3xl font-black text-slate-900 mb-2">Advanced Neuromodulation Certification</h1>
                 <p class="text-slate-600 flex items-center gap-2">
                     <i class="fa-solid fa-location-dot text-brand-blue"></i>
-                    Berlin, Germany (Sozo Brain Center HQ)
+                    Berlin, Germany (Anava HQ)
                 </p>
             </div>
             <div class="flex items-center gap-3">
                 <button
-                    class="px-4 py-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-600 hover:text-sozo-600 hover:border-sozo-600 transition">
+                    class="px-4 py-2 bg-white border border-slate-300 rounded-lg font-semibold text-slate-600 hover:text-anava-600 hover:border-anava-600 transition">
                     <i class="fa-solid fa-pen-to-square mr-2"></i>Edit Details
                 </button>
                 <button
@@ -265,9 +265,9 @@
                         <div class="text-2xl font-black">40</div>
                     </div>
                 </div>
-                <div class="card p-5 border-l-4 border-l-sozo-600 flex items-center gap-4">
+                <div class="card p-5 border-l-4 border-l-anava-600 flex items-center gap-4">
                     <div
-                        class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center text-sozo-600 text-xl">
+                        class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center text-anava-600 text-xl">
                         <i class="fa-solid fa-check-circle"></i>
                     </div>
                     <div>
@@ -305,7 +305,7 @@
                         <div class="relative">
                             <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-400 text-sm"></i>
                             <input type="text" placeholder="Search doctors..."
-                                class="pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-sozo-600">
+                                class="pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-anava-600">
                         </div>
                     </div>
 
@@ -456,7 +456,7 @@
                     <div class="card p-6">
                         <h3 class="font-bold text-slate-800 mb-4">Live Notes</h3>
                         <textarea
-                            class="w-full h-32 p-3 bg-slate-50 border border-slate-200 rounded-lg text-sm mb-2 focus:outline-none focus:border-sozo-500"
+                            class="w-full h-32 p-3 bg-slate-50 border border-slate-200 rounded-lg text-sm mb-2 focus:outline-none focus:border-anava-500"
                             placeholder="Log observations or issues here..."></textarea>
                         <button
                             class="w-full py-2 bg-slate-800 text-white rounded-lg text-xs font-bold hover:bg-slate-900">Save
@@ -491,10 +491,10 @@
                     </div>
                     <!-- Step 3 -->
                     <div class="relative">
-                        <div class="text-4xl font-black text-sozo-600 mb-1">8</div>
-                        <div class="text-xs font-bold text-sozo-600 uppercase tracking-wide">Fellowship</div>
+                        <div class="text-4xl font-black text-anava-600 mb-1">8</div>
+                        <div class="text-xs font-bold text-anava-600 uppercase tracking-wide">Fellowship</div>
                         <div class="h-1 w-full bg-slate-200 mt-3 rounded-full overflow-hidden">
-                            <div class="h-full bg-sozo-600 w-[21%]"></div>
+                            <div class="h-full bg-anava-600 w-[21%]"></div>
                         </div>
                         <div class="absolute -left-4 top-1/2 text-slate-300 text-xs">33%</div>
                     </div>
@@ -527,9 +527,9 @@
                 <!-- Col 2: In Discussion -->
                 <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold text-sozo-600"><i class="fa-solid fa-comments mr-2"></i>In Discussion
+                        <h3 class="font-bold text-anava-600"><i class="fa-solid fa-comments mr-2"></i>In Discussion
                             (Fellowship)</h3>
-                        <span class="bg-orange-100 text-sozo-600 text-xs font-bold px-2 py-1 rounded-full">5</span>
+                        <span class="bg-orange-100 text-anava-600 text-xs font-bold px-2 py-1 rounded-full">5</span>
                     </div>
 
                     <div class="space-y-3">
@@ -543,7 +543,7 @@
                                 Sent proposal.</p>
                             <div class="flex gap-2">
                                 <button
-                                    class="flex-1 py-1.5 bg-sozo-600 text-white text-xs font-bold rounded hover:bg-sozo-700">Close
+                                    class="flex-1 py-1.5 bg-anava-600 text-white text-xs font-bold rounded hover:bg-anava-700">Close
                                     Deal</button>
                                 <button
                                     class="px-2 py-1.5 border border-slate-200 rounded hover:bg-slate-50 text-slate-500"><i
@@ -574,14 +574,14 @@
 
     </main>
 
-    <!-- SOZO FOOTER -->
-    <div class="sozo-footer">
+    <!-- ANAVA FOOTER -->
+    <div class="anava-footer">
         <div class="footer-content">
             <div class="footer-left">
-                <span>© Copyright 2026 SOZO Brain Center</span>
+                <span>© Copyright 2026 Anava</span>
             </div>
             <div class="footer-right">
-                <span>Get In Touch : info@sozobraincenter.com | +35722879000</span>
+                <span>Get In Touch : info@anava.com | +1 800 ANAVA 00</span>
             </div>
         </div>
     </div>
@@ -621,7 +621,7 @@
                 <td class="px-6 py-4">
                     <span class="px-2 py-1 rounded text-xs font-bold uppercase
                         ${doc.status === 'Partner' ? 'bg-green-100 text-green-700' :
-                    doc.status === 'Fellow' ? 'bg-orange-100 text-sozo-600' : 'bg-slate-100 text-slate-600'}">
+                    doc.status === 'Fellow' ? 'bg-orange-100 text-anava-600' : 'bg-slate-100 text-slate-600'}">
                         ${doc.status}
                     </span>
                 </td>
@@ -630,7 +630,7 @@
                     <div class="text-xs mt-1"><i class="fa-solid fa-phone w-4"></i> ${doc.phone}</div>
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <button class="text-slate-400 hover:text-sozo-600 transition mx-1" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="text-slate-400 hover:text-anava-600 transition mx-1" title="Edit"><i class="fa-solid fa-pen"></i></button>
                     <button class="text-slate-400 hover:text-brand-blue transition mx-1" title="View Profile"><i class="fa-solid fa-eye"></i></button>
                 </td>
             </tr>
@@ -640,7 +640,7 @@
         function renderWaitlist() {
             const container = document.getElementById('waitlistContainer');
             container.innerHTML = waitlist.map(w => `
-            <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm flex items-center justify-between group cursor-pointer hover:border-sozo-500 transition">
+            <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm flex items-center justify-between group cursor-pointer hover:border-anava-500 transition">
                 <div class="flex items-center gap-3">
                     <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">#${w.pos}</div>
                     <div>

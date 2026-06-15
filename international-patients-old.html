@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>International Patient Pre-Qualification | Sozo Brain Center</title>
+  <title>International Patient Pre-Qualification | Anava</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
@@ -192,7 +192,7 @@
           <i class="fa-solid fa-brain text-6xl text-purple-600"></i>
         </div>
       </div>
-      <h1 class="text-4xl font-bold mb-4">Sozo Brain Center</h1>
+      <h1 class="text-4xl font-bold mb-4">Anava</h1>
       <h2 class="text-2xl font-semibold mb-2">International Patient Pre-Qualification</h2>
       <p class="text-lg opacity-90">Parkinson's Disease Treatment Inquiry</p>
       <p class="text-sm mt-4 opacity-75 max-w-2xl mx-auto">
@@ -1336,7 +1336,7 @@
       for (const [key, value] of formData.entries()) {
         savedAnswers[key] = value;
       }
-      localStorage.setItem('sozo_questionnaire_draft', JSON.stringify({
+      localStorage.setItem('anava_questionnaire_draft', JSON.stringify({
         answers: savedAnswers,
         currentSection,
         savedAt: new Date().toISOString()
@@ -1355,7 +1355,7 @@
 
     // Restore saved progress on load
     window.addEventListener('load', () => {
-      const saved = localStorage.getItem('sozo_questionnaire_draft');
+      const saved = localStorage.getItem('anava_questionnaire_draft');
       if (saved) {
         try {
           const data = JSON.parse(saved);
@@ -1380,7 +1380,7 @@
 
     // Clear draft on successful submission
     document.getElementById('questionnaireForm').addEventListener('submit', () => {
-      localStorage.removeItem('sozo_questionnaire_draft');
+      localStorage.removeItem('anava_questionnaire_draft');
     });
   </script>
 </body>

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Treatment Session - Sozo Clinical Portal</title>
+    <title>Start Treatment Session - Anava Clinical Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     
@@ -12,11 +12,11 @@
             theme: {
                 extend: {
                     colors: {
-                        sozo: {
+                        anava: {
                             50: '#fff7ed',
                             100: '#ffedd5',
                             200: '#fed7aa',
-                            500: '#f97316',
+                            500: '#0052a2',
                             600: '#ea580c',
                             700: '#c2410c',
                             800: '#9a3412',
@@ -50,7 +50,7 @@
         
         .badge { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; }
         .badge-success { background-color: #dcfce7; color: #166534; }
-        .badge-sozo { background-color: #fff7ed; color: #ea580c; }
+        .badge-anava { background-color: #fff7ed; color: #ea580c; }
 
         .spinner {
             width: 12px;
@@ -80,12 +80,12 @@
 <body class="text-slate-800">
     <div class="flex flex-col min-h-screen">
         <!-- Header -->
-        <div class="bg-gradient-to-r from-sozo-600 to-sozo-700 text-white py-8 px-8 shadow-lg">
+        <div class="bg-gradient-to-r from-anava-600 to-anava-700 text-white py-8 px-8 shadow-lg">
             <div class="max-w-7xl mx-auto">
                 <div class="flex justify-between items-start">
                     <div>
                         <h1 class="text-3xl font-bold">Start Treatment Session</h1>
-                        <p class="text-sozo-100 mt-2 text-sm font-medium">Initiate and manage patient treatment session</p>
+                        <p class="text-anava-100 mt-2 text-sm font-medium">Initiate and manage patient treatment session</p>
                     </div>
                     <div id="sessionTimer" class="hidden text-right">
                         <div class="text-sm font-medium mb-2">Session Duration</div>
@@ -103,7 +103,7 @@
                     <div class="space-y-6">
                         <!-- Patient Info -->
                         <div class="card p-6">
-                            <h2 class="text-xs font-bold text-sozo-600 uppercase tracking-wide mb-4 border-l-4 border-sozo-600 pl-3">Patient Information</h2>
+                            <h2 class="text-xs font-bold text-anava-600 uppercase tracking-wide mb-4 border-l-4 border-anava-600 pl-3">Patient Information</h2>
                             <div class="space-y-4">
                                 <div>
                                     <div class="text-xs font-bold text-slate-500 uppercase mb-1">Patient Name</div>
@@ -126,7 +126,7 @@
 
                         <!-- Session Plan -->
                         <div class="card p-6">
-                            <h2 class="text-xs font-bold text-sozo-600 uppercase tracking-wide mb-4 border-l-4 border-sozo-600 pl-3">Session Plan</h2>
+                            <h2 class="text-xs font-bold text-anava-600 uppercase tracking-wide mb-4 border-l-4 border-anava-600 pl-3">Session Plan</h2>
                             <div class="space-y-4">
                                 <div>
                                     <div class="text-xs font-bold text-slate-500 uppercase mb-1">Session Number</div>
@@ -149,8 +149,8 @@
 
                         <!-- Session Status -->
                         <div class="card p-6">
-                            <h2 class="text-xs font-bold text-sozo-600 uppercase tracking-wide mb-4 border-l-4 border-sozo-600 pl-3">Session Status</h2>
-                            <span class="badge badge-sozo" id="sessionStatus">Not Started</span>
+                            <h2 class="text-xs font-bold text-anava-600 uppercase tracking-wide mb-4 border-l-4 border-anava-600 pl-3">Session Status</h2>
+                            <span class="badge badge-anava" id="sessionStatus">Not Started</span>
                         </div>
                     </div>
 
@@ -162,7 +162,7 @@
 
                         <!-- Montage Adjustments with Device Tabs -->
                         <div class="card p-6">
-                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-sliders text-sozo-600"></i>Montage Adjustments & Device Configuration</h3>
+                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-sliders text-anava-600"></i>Montage Adjustments & Device Configuration</h3>
                             
                             <!-- Device Tabs Navigation -->
                             <div class="mb-6 border-b border-slate-200">
@@ -179,7 +179,7 @@
 
                         <!-- Session Duration -->
                         <div class="card p-6">
-                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-hourglass-end text-sozo-600"></i>Session Duration</h3>
+                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-hourglass-end text-anava-600"></i>Session Duration</h3>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
                                 <div>
                                     <label for="sessionStartTime" class="text-xs font-bold text-slate-600 uppercase mb-2 block">Start Time <span class="text-red-500">*</span></label>
@@ -197,7 +197,7 @@
 
                         <!-- Patient Symptoms -->
                         <div class="card p-6">
-                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-heart-pulse text-sozo-600"></i>Patient Symptoms</h3>
+                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-heart-pulse text-anava-600"></i>Patient Symptoms</h3>
                             <div class="mb-4">
                                 <label class="text-xs font-bold text-slate-600 uppercase mb-3 block">Current Symptoms Observed <span class="text-red-500"></span></label>
                                 <div class="grid grid-cols-2 gap-3">
@@ -235,7 +235,7 @@
 
                         <!-- Clinical Notes -->
                         <div class="card p-6">
-                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-pen-to-square text-sozo-600"></i>Clinical Notes</h3>
+                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-pen-to-square text-anava-600"></i>Clinical Notes</h3>
                             <div>
                                 <label for="clinicalNotes" class="text-xs font-bold text-slate-600 uppercase mb-2 block">Real-time Observations <span class="text-red-500"></span></label>
                                 <textarea id="clinicalNotes" name="clinicalNotes" placeholder="Record any clinical observations, patient behavior, responses, or changes during the session..." class="input-royal h-24"></textarea>
@@ -244,7 +244,7 @@
 
                         <!-- Patient Feedback -->
                         <div class="card p-6">
-                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-comments text-sozo-600"></i>Patient Feedback</h3>
+                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-comments text-anava-600"></i>Patient Feedback</h3>
                             <div>
                                 <label for="patientFeedback" class="text-xs font-bold text-slate-600 uppercase mb-2 block">Patient's Verbal Feedback <span class="text-red-500"></span></label>
                                 <textarea id="patientFeedback" name="patientFeedback" placeholder="Record patient's feedback, comfort level, perceived effects, or any concerns expressed during the session..." class="input-royal h-24"></textarea>
@@ -254,10 +254,10 @@
 
                         <!-- Session Photos -->
                         <div class="card p-6">
-                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-camera text-sozo-600"></i>Session Photos</h3>
+                            <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-camera text-anava-600"></i>Session Photos</h3>
                             <div>
                                 <label class="text-xs font-bold text-slate-600 uppercase mb-3 block">Progress Images</label>
-                                <div class="border-2 border-dashed border-sozo-600 rounded-xl p-8 text-center cursor-pointer hover:bg-sozo-50 transition bg-slate-50" id="fileUploadArea">
+                                <div class="border-2 border-dashed border-anava-600 rounded-xl p-8 text-center cursor-pointer hover:bg-anava-50 transition bg-slate-50" id="fileUploadArea">
                                     <div class="text-4xl mb-3">📸</div>
                                     <div class="text-sm font-600 text-slate-700 mb-1">Drag and drop images here or click to browse</div>
                                     <div class="text-xs text-slate-500">Supported formats: JPG, PNG, WEBP (Max 5MB per file)</div>
@@ -350,7 +350,7 @@
                 <button 
                     class="device-tab px-4 py-2 rounded-t-lg font-semibold text-sm transition-all whitespace-nowrap border-b-2 ${
                         deviceState.activeDeviceId === device.id 
-                            ? 'bg-sozo-50 border-sozo-600 text-sozo-600' 
+                            ? 'bg-anava-50 border-anava-600 text-anava-600' 
                             : 'bg-slate-100 border-transparent text-slate-600 hover:bg-slate-200'
                     }"
                     onclick="switchDevice('${device.id}')"

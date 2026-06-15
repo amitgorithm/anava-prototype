@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Improvements - Sozo Clinical Operating System</title>
+    <title>Clinical Improvements - Anava Clinical Operating System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --orange-primary: rgb(244, 121, 32);
+            --anava-blue: rgb(0, 82, 162);
             --blue-primary: rgb(0, 161, 228);
             --green-primary: #10b981;
             --dark-bg: #0f172a;
@@ -61,7 +61,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--orange-primary);
+            color: var(--anava-blue);
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
@@ -131,7 +131,7 @@
         }
 
         .summary-card.mixed {
-            border-color: var(--orange-primary);
+            border-color: var(--anava-blue);
             background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
         }
 
@@ -213,12 +213,12 @@
             height: 60px;
             border-radius: 50%;
             background: white;
-            border: 3px solid var(--orange-primary);
+            border: 3px solid var(--anava-blue);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            color: var(--orange-primary);
+            color: var(--anava-blue);
             font-size: 14px;
             transition: all 0.3s ease;
             position: relative;
@@ -226,7 +226,7 @@
         }
 
         .node-circle.completed {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
             color: white;
         }
 
@@ -258,7 +258,7 @@
         }
 
         .session-dot.completed {
-            background: var(--orange-primary);
+            background: var(--anava-blue);
         }
 
         /* GRAPH CONTAINER */
@@ -294,13 +294,13 @@
         }
 
         .toggle-btn:hover {
-            border-color: var(--orange-primary);
-            color: var(--orange-primary);
+            border-color: var(--anava-blue);
+            color: var(--anava-blue);
         }
 
         .toggle-btn.active {
-            background: var(--orange-primary);
-            border-color: var(--orange-primary);
+            background: var(--anava-blue);
+            border-color: var(--anava-blue);
             color: white;
         }
 
@@ -343,8 +343,8 @@
         }
 
         .montage-item:hover {
-            border-color: var(--orange-primary);
-            box-shadow: 0 4px 12px rgba(244, 121, 32, 0.1);
+            border-color: var(--anava-blue);
+            box-shadow: 0 4px 12px rgba(0, 82, 162, 0.1);
         }
 
         .montage-header {
@@ -833,14 +833,14 @@
         </div>
     </div>
 
-    <!-- SOZO FOOTER -->
-    <div class="sozo-footer">
+    <!-- ANAVA FOOTER -->
+    <div class="anava-footer">
         <div class="footer-content">
             <div class="footer-left">
-                <span>© Copyright 2026 SOZO Brain Center</span>
+                <span>© Copyright 2026 Anava</span>
             </div>
             <div class="footer-right">
-                <span>Get In Touch : info@sozobraincenter.com | +35722879000</span>
+                <span>Get In Touch : info@anava.com | +1 800 ANAVA 00</span>
             </div>
         </div>
     </div>
@@ -919,8 +919,8 @@
                     datasets: [{
                         label: 'Composite Score',
                         data: [42, 55, 58],
-                        borderColor: 'rgb(244, 121, 32)',
-                        backgroundColor: 'rgba(244, 121, 32, 0.1)',
+                        borderColor: 'rgb(0, 82, 162)',
+                        backgroundColor: 'rgba(0, 82, 162, 0.1)',
                         tension: 0.4,
                         fill: true
                     }]

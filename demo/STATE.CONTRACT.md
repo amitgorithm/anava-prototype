@@ -1,7 +1,7 @@
-# STATE MANAGEMENT CONTRACT
+﻿# STATE MANAGEMENT CONTRACT
 ## Role-Based Prototype Application
 
-This document defines the **mandatory state structure and rules** for the Sozo Demo Flow application. All developers must adhere to this contract strictly.
+This document defines the **mandatory state structure and rules** for the Anava Demo Flow application. All developers must adhere to this contract strictly.
 
 ---
 
@@ -115,7 +115,7 @@ if (type === ASSESSMENTS.PRS) { }
 
 - Every action in `actions.js` calls `saveState()` automatically
 - You must **never** call `saveState()` from outside `actions.js`
-- All mutations are automatically persisted to `localStorage` with key `sozoDemoState_v2`
+- All mutations are automatically persisted to `localStorage` with key `anavaDemoState_v2`
 
 ### Load Points
 
